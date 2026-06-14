@@ -1,0 +1,27 @@
+name: Publish to Supabase
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_slug:
+        description: Release slug, for example act-i-preview or 2026-06-serial-01
+        required: true
+        default: preview
+  push:
+    tags:
+      - "release-*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      SUPABASE_STORAGE_BUCKET: ${{ vars.SUPABASE_STORAGE_BUCKET || 'book-releases' }}
+      ATELIER_RELEASE_SLUG: ${{ inputs.release_slug || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish artifacts
+        run: ./.atelier/publish_to_supabase.sh
