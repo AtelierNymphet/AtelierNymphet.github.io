@@ -1,6 +1,7 @@
 .env
 .env.*
 !.env.example
+supabase/.temp/
 
 # Nested book/application repositories are managed as their own remotes.
 ANApp/
