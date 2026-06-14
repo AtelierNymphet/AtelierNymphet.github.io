@@ -1,0 +1,37 @@
+.env
+.env.*
+!.env.example
+
+# Nested book/application repositories are managed as their own remotes.
+ANApp/
+Absinthe/
+Brulee/
+Camille/
+CancelCult/
+DiaryOfAStalker/
+DiaryOfAYoungGirl/
+Isibella/
+IsibellaPuddleduck/
+Juliette/
+LaRecherche/
+Lola/
+LolaMajnun/
+Mircalla/
+PetitMadeleine/
+Playbill/
+ReturnToTheChateau/
+TheMysteryOfTheChateau/
+TheOpera/
+TheOriginalOfLaura/
+TheSpiderAndTheFly/
+Theatre/
+ToddVampire/
+TwentyDollarWords/
+WeeChristopher/
+WriteInRain-DeVisionQuest/
+WriteInRain-ReVisionQuest/
+astrology/
+readest-research/
+
+# Local generated exports.
+No_Transcript_Survives_Facebook_Messenger_Call_Poems*.pdf

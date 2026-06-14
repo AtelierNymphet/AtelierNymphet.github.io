@@ -1,0 +1,21 @@
+project_id = "ateliernymphet"
+
+[api]
+enabled = true
+schemas = ["public", "storage"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[auth]
+enabled = true
+site_url = "https://ateliernymphet.com"
+additional_redirect_urls = [
+  "https://lola.ateliernymphet.com",
+  "https://absinthe.ateliernymphet.com",
+  "https://mircalla.ateliernymphet.com",
+  "http://localhost:3000"
+]
+
+[storage]
+enabled = true
+file_size_limit = "100MiB"
