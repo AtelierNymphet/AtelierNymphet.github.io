@@ -2,6 +2,7 @@
 set -euo pipefail
 
 manifest="${ATELIER_PUBLISH_MANIFEST:-.atelier/publish-manifest.json}"
+crossbook_manifest="${ATELIER_CROSSBOOK_MANIFEST:-.atelier/crossbook-links.json}"
 
 if [[ ! -f "$manifest" ]]; then
   echo "Missing publish manifest: $manifest" >&2
@@ -145,5 +146,145 @@ curl -fsS -X POST "${SUPABASE_URL}/rest/v1/release_units?on_conflict=work_id,slu
   -H "Content-Type: application/json" \
   -H "Prefer: resolution=merge-duplicates" \
   -d "$body" >/dev/null
+
+release_response="$(api GET "/rest/v1/release_units?work_id=eq.${work_id}&slug=eq.${release_slug}&select=id")"
+release_unit_id="$(printf '%s' "$release_response" | python3 -c 'import json,sys; rows=json.load(sys.stdin); print(rows[0]["id"] if rows else "")')"
+
+if [[ -f "$crossbook_manifest" ]]; then
+  echo "Uploading ${crossbook_manifest} -> ${bucket}/${prefix}/crossbook-links.json"
+  curl -fsS -X POST "${SUPABASE_URL}/storage/v1/object/${bucket}/${prefix}/crossbook-links.json" \
+    -H "apikey: ${SUPABASE_SERVICE_ROLE_KEY}" \
+    -H "Authorization: Bearer ${SUPABASE_SERVICE_ROLE_KEY}" \
+    -H "x-upsert: true" \
+    -H "Content-Type: application/json" \
+    --data-binary @"${crossbook_manifest}" >/dev/null
+
+  SUPABASE_URL="$SUPABASE_URL" \
+  SUPABASE_SERVICE_ROLE_KEY="$SUPABASE_SERVICE_ROLE_KEY" \
+  ATELIER_SOURCE_WORK_SLUG="$work_slug" \
+  ATELIER_SOURCE_RELEASE_SLUG="$release_slug" \
+  ATELIER_SOURCE_WORK_ID="$work_id" \
+  ATELIER_SOURCE_RELEASE_UNIT_ID="$release_unit_id" \
+  python3 - "$crossbook_manifest" <<'PY'
+import json
+import os
+import sys
+import urllib.parse
+import urllib.request
+
+manifest_path = sys.argv[1]
+with open(manifest_path, encoding="utf-8") as f:
+    manifest = json.load(f)
+
+links = manifest.get("links", [])
+if not links:
+    raise SystemExit(0)
+
+supabase_url = os.environ["SUPABASE_URL"].rstrip("/")
+service_key = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+source_work_slug = os.environ["ATELIER_SOURCE_WORK_SLUG"]
+source_release_slug = os.environ["ATELIER_SOURCE_RELEASE_SLUG"]
+source_work_id = os.environ["ATELIER_SOURCE_WORK_ID"]
+source_release_unit_id = os.environ.get("ATELIER_SOURCE_RELEASE_UNIT_ID") or None
+
+headers = {
+    "apikey": service_key,
+    "Authorization": f"Bearer {service_key}",
+    "Content-Type": "application/json",
+}
+
+def request(method, path, body=None, prefer=None):
+    req_headers = dict(headers)
+    if prefer:
+        req_headers["Prefer"] = prefer
+    data = None if body is None else json.dumps(body).encode("utf-8")
+    req = urllib.request.Request(f"{supabase_url}{path}", data=data, headers=req_headers, method=method)
+    with urllib.request.urlopen(req) as response:
+        raw = response.read().decode("utf-8")
+    return json.loads(raw) if raw else None
+
+def quote(value):
+    return urllib.parse.quote(str(value), safe="")
+
+work_cache = {source_work_slug: source_work_id}
+release_cache = {(source_work_slug, source_release_slug): source_release_unit_id}
+
+def get_work_id(slug):
+    if not slug:
+        return None
+    if slug in work_cache:
+        return work_cache[slug]
+    rows = request("GET", f"/rest/v1/works?slug=eq.{quote(slug)}&select=id")
+    work_cache[slug] = rows[0]["id"] if rows else None
+    return work_cache[slug]
+
+def get_release_id(work_slug, release_slug):
+    if not work_slug or not release_slug:
+        return None
+    key = (work_slug, release_slug)
+    if key in release_cache:
+        return release_cache[key]
+    work_id = get_work_id(work_slug)
+    if not work_id:
+        release_cache[key] = None
+        return None
+    rows = request(
+        "GET",
+        f"/rest/v1/release_units?work_id=eq.{quote(work_id)}&slug=eq.{quote(release_slug)}&select=id",
+    )
+    release_cache[key] = rows[0]["id"] if rows else None
+    return release_cache[key]
+
+def clean_location(location, fallback_work_slug=None, fallback_release_slug=None):
+    location = location or {}
+    work_slug = location.get("workSlug") or fallback_work_slug
+    release_slug = location.get("releaseSlug") or fallback_release_slug
+    return {
+        "work_slug": work_slug,
+        "release_slug": release_slug,
+        "work_id": get_work_id(work_slug),
+        "release_unit_id": get_release_id(work_slug, release_slug),
+        "href": location.get("href") or None,
+        "cfi": location.get("cfi") or None,
+        "fragment": location.get("fragment") or None,
+        "label": location.get("label") or None,
+    }
+
+rows = []
+for link in links:
+    source = clean_location(link.get("source"), source_work_slug, source_release_slug)
+    target = clean_location(link.get("target"))
+    if not source["work_id"] or not target["work_id"]:
+        print(f"Skipping crossbook link with unresolved work: {link.get('id')}", file=sys.stderr)
+        continue
+    rows.append({
+        "manifest_id": link.get("id"),
+        "rel": link.get("rel") or "references",
+        "title": link.get("title") or None,
+        "note": link.get("note") or None,
+        "source_work_id": source["work_id"],
+        "source_release_unit_id": source["release_unit_id"],
+        "source_href": source["href"],
+        "source_cfi": source["cfi"],
+        "source_fragment": source["fragment"],
+        "source_label": source["label"],
+        "target_work_id": target["work_id"],
+        "target_release_unit_id": target["release_unit_id"],
+        "target_href": target["href"],
+        "target_cfi": target["cfi"],
+        "target_fragment": target["fragment"],
+        "target_label": target["label"],
+    })
+
+if rows:
+    request(
+        "POST",
+        "/rest/v1/crossbook_links?on_conflict=manifest_id",
+        rows,
+        prefer="resolution=merge-duplicates",
+    )
+    print(f"Upserted {len(rows)} crossbook link(s).")
+PY
+fi
 
 echo "Published ${#artifacts[@]} artifact(s) for ${work_slug} at ${bucket}/${prefix}"

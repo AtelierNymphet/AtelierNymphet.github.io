@@ -77,6 +77,9 @@ for repo in "${repos[@]}"; do
   mkdir -p "$repo_dir/.atelier" "$repo_dir/.github/workflows"
   cp "$root/scripts/templates/publish_to_supabase.sh" "$repo_dir/.atelier/publish_to_supabase.sh"
   cp "$root/scripts/templates/publish-supabase.yml" "$repo_dir/.github/workflows/publish-supabase.yml"
+  if [[ ! -f "$repo_dir/.atelier/crossbook-links.json" ]]; then
+    cp "$root/scripts/templates/crossbook-links.json" "$repo_dir/.atelier/crossbook-links.json"
+  fi
   chmod +x "$repo_dir/.atelier/publish_to_supabase.sh"
 
   slug="$(slug_for_repo "$repo")"
