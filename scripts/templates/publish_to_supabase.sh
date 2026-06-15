@@ -48,7 +48,10 @@ for pattern in manifest.get("artifact_globs", ["dist/**", "releases/**"]):
 PY
 )"
 
-mapfile -t artifacts < <(
+artifacts=()
+while IFS= read -r artifact; do
+  artifacts+=("$artifact")
+done < <(
   python3 - "$manifest" <<'PY'
 import glob, json, os, sys
 with open(sys.argv[1], encoding="utf-8") as f:
