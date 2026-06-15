@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[7022,["7022","static/chunks/7022-b05e3b33a63431de.js","9734","static/chunks/app/offline/page-6a6ad60665dcf13f.js"],"Image"]
+3:I[72605,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center bg-gray-100 text-center","children":[["$","div",null,{"className":"mb-4","children":["$","$L2",null,{"src":"/icon.png","alt":"App Icon","width":100,"height":100,"className":"rounded-lg"}]}],["$","h1",null,{"className":"text-2xl font-bold text-gray-800","children":"Readest"}],["$","p",null,{"className":"mt-2 text-gray-600","children":"It seems you're offline. Please check your internet connection and try again."}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"buTDwXLt6swlJz4iWfvF9"}
+5:null

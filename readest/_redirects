@@ -1,0 +1,3 @@
+/reader/:ids /reader?ids=:ids 200
+/o/book/:hash/annotation/:id /o?book=:hash&note=:id 200
+/s/:token /s?token=:token 200

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4817],{4817:(e,a,l)=>{l.d(a,{writeText:()=>i});var t=l(88215);async function i(e,a){await (0,t.lA)("plugin:clipboard-manager|write_text",{label:a?.label,text:e})}l(54310)}}]);

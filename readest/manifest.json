@@ -1,0 +1,26 @@
+{
+  "name": "Atelier Nymphet Reader",
+  "short_name": "AN Reader",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Atelier Nymphet Reader is a bookmaking environment for reading, annotation, review, and publication.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "splash_pages": null
+}
