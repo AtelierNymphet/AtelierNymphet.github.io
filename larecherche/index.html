@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>La Recherche | Atelier Nymphet</title>
+    <link rel="icon" href="data:,">
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f6f0df;
+        --muted: #bfb59f;
+        --gold: #d6a84f;
+        --line: rgba(246, 240, 223, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 18% 12%, rgba(214, 168, 79, 0.14), transparent 28rem),
+          linear-gradient(135deg, #0e1211 0%, #161c19 42%, #090b0a 100%);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      main {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .masthead {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 34px 0 20px;
+        display: grid;
+        gap: 8px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: var(--gold);
+        font: 600 0.72rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.25rem, 6vw, 5.4rem);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .deck {
+        max-width: 760px;
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        line-height: 1.55;
+      }
+
+      .shelf {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 34px 0 46px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(16px, 2.5vw, 28px);
+        align-items: end;
+      }
+
+      .book {
+        min-width: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .cover-link {
+        display: block;
+        position: relative;
+        border: 1px solid rgba(246, 240, 223, 0.22);
+        box-shadow:
+          0 18px 38px rgba(0, 0, 0, 0.45),
+          0 1px 0 rgba(255, 255, 255, 0.08) inset;
+        background: #080a09;
+        overflow: hidden;
+      }
+
+      .cover-link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.34);
+      }
+
+      .cover {
+        display: block;
+        width: 100%;
+        aspect-ratio: 148 / 210;
+        object-fit: cover;
+      }
+
+      .caption {
+        display: grid;
+        gap: 4px;
+        min-height: 4.7rem;
+      }
+
+      .caption h2 {
+        margin: 0;
+        font-size: clamp(1.15rem, 2vw, 1.55rem);
+        font-weight: 400;
+        line-height: 1.12;
+      }
+
+      .caption p {
+        margin: 0;
+        color: var(--muted);
+        font: 0.78rem/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .sequence {
+        color: var(--gold);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 900px) {
+        .shelf {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          max-width: 680px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .masthead {
+          padding-top: 24px;
+        }
+
+        .shelf {
+          grid-template-columns: 1fr;
+          max-width: 330px;
+          padding-top: 26px;
+        }
+
+        .caption {
+          min-height: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <p class="eyebrow">Atelier Nymphet</p>
+        <h1>La Recherche</h1>
+        <p class="deck">
+          Four A5 volumes arranged as a road, a court, a sentence, and an appeal.
+        </p>
+      </header>
+
+      <section class="shelf" aria-label="La Recherche book covers">
+        <article class="book">
+          <a class="cover-link" href="./covers/lola-a-novel-cover.jpg" aria-label="Open Lola cover">
+            <img class="cover" src="./covers/lola-a-novel-cover.jpg" alt="Cover of Lola">
+          </a>
+          <div class="caption">
+            <p class="sequence">I</p>
+            <h2>Lola</h2>
+            <p>The open road before the machinery fully names itself.</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <a class="cover-link" href="./covers/the-trial-cover.png" aria-label="Open The Trial cover">
+            <img class="cover" src="./covers/the-trial-cover.png" alt="Cover of The Trial">
+          </a>
+          <div class="caption">
+            <p class="sequence">II</p>
+            <h2>The Trial</h2>
+            <p>Record, testimony, spectacle, and the mortal court.</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <a class="cover-link" href="./covers/the-sentence-cover.png" aria-label="Open The Sentence cover">
+            <img class="cover" src="./covers/the-sentence-cover.png" alt="Cover of The Sentence">
+          </a>
+          <div class="caption">
+            <p class="sequence">III</p>
+            <h2>The Sentence</h2>
+            <p>Confinement, calls, letters, and time under rule.</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <a class="cover-link" href="./covers/the-appeal-cover.png" aria-label="Open The Appeal cover">
+            <img class="cover" src="./covers/the-appeal-cover.png" alt="Cover of The Appeal">
+          </a>
+          <div class="caption">
+            <p class="sequence">IV</p>
+            <h2>The Appeal</h2>
+            <p>A road through Færie, toward Camille's world.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
