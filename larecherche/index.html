@@ -68,20 +68,84 @@
         line-height: 1.55;
       }
 
-      .shelf {
-        width: min(1180px, calc(100vw - 32px));
+      .timeline {
+        width: 100%;
+        padding: 28px 0 46px;
+        overflow: hidden;
+      }
+
+      .carousel {
+        width: min(1180px, 100vw);
         margin: 0 auto;
-        padding: 34px 0 46px;
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: clamp(16px, 2.5vw, 28px);
-        align-items: end;
+        gap: 18px;
+      }
+
+      .track {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(270px, 28%);
+        gap: clamp(18px, 3vw, 34px);
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: var(--gold) rgba(246, 240, 223, 0.12);
+        scrollbar-width: thin;
+        padding: 4px max(16px, calc((100vw - 1180px) / 2)) 18px;
+      }
+
+      .track::-webkit-scrollbar {
+        height: 10px;
+      }
+
+      .track::-webkit-scrollbar-track {
+        background: rgba(246, 240, 223, 0.1);
+      }
+
+      .track::-webkit-scrollbar-thumb {
+        background: rgba(214, 168, 79, 0.72);
+        border-radius: 999px;
+      }
+
+      .timeline-rule {
+        position: relative;
+        height: 1px;
+        margin: 0 max(16px, calc((100vw - 1180px) / 2));
+        background: linear-gradient(90deg, transparent, rgba(214, 168, 79, 0.7), transparent);
+      }
+
+      .timeline-rule::before,
+      .timeline-rule::after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      .timeline-rule::before {
+        left: 0;
+      }
+
+      .timeline-rule::after {
+        right: 0;
       }
 
       .book {
         min-width: 0;
         display: grid;
-        gap: 14px;
+        gap: 12px;
+        scroll-snap-align: center;
+      }
+
+      .year {
+        color: var(--gold);
+        font-size: clamp(1.45rem, 4vw, 3.1rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0;
       }
 
       .cover-link {
@@ -136,10 +200,19 @@
         text-transform: uppercase;
       }
 
-      @media (max-width: 900px) {
-        .shelf {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          max-width: 680px;
+      .hint {
+        margin: 0;
+        padding: 0 max(16px, calc((100vw - 1180px) / 2));
+        color: rgba(246, 240, 223, 0.56);
+        font: 0.72rem/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 1180px) {
+        .track {
+          padding-left: 0;
+          padding-right: 0;
         }
       }
 
@@ -148,10 +221,8 @@
           padding-top: 24px;
         }
 
-        .shelf {
-          grid-template-columns: 1fr;
-          max-width: 330px;
-          padding-top: 26px;
+        .track {
+          grid-auto-columns: minmax(260px, 82vw);
         }
 
         .caption {
@@ -166,54 +237,64 @@
         <p class="eyebrow">Atelier Nymphet</p>
         <h1>La Recherche</h1>
         <p class="deck">
-          Four A5 volumes arranged as a road, a court, a sentence, and an appeal.
+          Four A5 volumes arranged as a chronological carousel.
         </p>
       </header>
 
-      <section class="shelf" aria-label="La Recherche book covers">
-        <article class="book">
-          <a class="cover-link" href="./covers/lola-a-novel-cover.jpg" aria-label="Open Lola cover">
-            <img class="cover" src="./covers/lola-a-novel-cover.jpg" alt="Cover of Lola">
-          </a>
-          <div class="caption">
-            <p class="sequence">I</p>
-            <h2>Lola</h2>
-            <p>The open road before the machinery fully names itself.</p>
-          </div>
-        </article>
+      <section class="timeline" aria-label="La Recherche timeline carousel">
+        <div class="carousel">
+          <div class="timeline-rule" aria-hidden="true"></div>
+          <div class="track">
+            <article class="book">
+              <div class="year">2021</div>
+              <a class="cover-link" href="./covers/lola-a-novel-cover.jpg" aria-label="Open Lola cover">
+                <img class="cover" src="./covers/lola-a-novel-cover.jpg" alt="Cover of Lola">
+              </a>
+              <div class="caption">
+                <p class="sequence">I</p>
+                <h2>Lola</h2>
+                <p>The open road before the machinery fully names itself.</p>
+              </div>
+            </article>
 
-        <article class="book">
-          <a class="cover-link" href="./covers/the-trial-cover.png" aria-label="Open The Trial cover">
-            <img class="cover" src="./covers/the-trial-cover.png" alt="Cover of The Trial">
-          </a>
-          <div class="caption">
-            <p class="sequence">II</p>
-            <h2>The Trial</h2>
-            <p>Record, testimony, spectacle, and the mortal court.</p>
-          </div>
-        </article>
+            <article class="book">
+              <div class="year">2022</div>
+              <a class="cover-link" href="./covers/the-trial-cover.png" aria-label="Open The Trial cover">
+                <img class="cover" src="./covers/the-trial-cover.png" alt="Cover of The Trial">
+              </a>
+              <div class="caption">
+                <p class="sequence">II</p>
+                <h2>The Trial</h2>
+                <p>Record, testimony, spectacle, and the mortal court.</p>
+              </div>
+            </article>
 
-        <article class="book">
-          <a class="cover-link" href="./covers/the-sentence-cover.png" aria-label="Open The Sentence cover">
-            <img class="cover" src="./covers/the-sentence-cover.png" alt="Cover of The Sentence">
-          </a>
-          <div class="caption">
-            <p class="sequence">III</p>
-            <h2>The Sentence</h2>
-            <p>Confinement, calls, letters, and time under rule.</p>
-          </div>
-        </article>
+            <article class="book">
+              <div class="year">2023</div>
+              <a class="cover-link" href="./covers/the-sentence-cover.png" aria-label="Open The Sentence cover">
+                <img class="cover" src="./covers/the-sentence-cover.png" alt="Cover of The Sentence">
+              </a>
+              <div class="caption">
+                <p class="sequence">III</p>
+                <h2>The Sentence</h2>
+                <p>Confinement, calls, letters, and time under rule.</p>
+              </div>
+            </article>
 
-        <article class="book">
-          <a class="cover-link" href="./covers/the-appeal-cover.png" aria-label="Open The Appeal cover">
-            <img class="cover" src="./covers/the-appeal-cover.png" alt="Cover of The Appeal">
-          </a>
-          <div class="caption">
-            <p class="sequence">IV</p>
-            <h2>The Appeal</h2>
-            <p>A road through Færie, toward Camille's world.</p>
+            <article class="book">
+              <div class="year">2023-</div>
+              <a class="cover-link" href="./covers/the-appeal-cover.png" aria-label="Open The Appeal cover">
+                <img class="cover" src="./covers/the-appeal-cover.png" alt="Cover of The Appeal">
+              </a>
+              <div class="caption">
+                <p class="sequence">IV</p>
+                <h2>The Appeal</h2>
+                <p>A road through Færie, toward Camille's world.</p>
+              </div>
+            </article>
           </div>
-        </article>
+          <p class="hint">Scroll timeline</p>
+        </div>
       </section>
     </main>
   </body>
