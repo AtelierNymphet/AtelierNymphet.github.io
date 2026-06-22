@@ -68,84 +68,71 @@
         line-height: 1.55;
       }
 
-      .timeline {
+      .gallery {
         width: 100%;
-        padding: 28px 0 46px;
+        padding: 30px 0 52px;
         overflow: hidden;
       }
 
-      .carousel {
-        width: min(1180px, 100vw);
+      .wall {
+        width: min(1180px, calc(100vw - 32px));
         margin: 0 auto;
         display: grid;
-        gap: 18px;
-      }
-
-      .track {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(270px, 28%);
-        gap: clamp(18px, 3vw, 34px);
-        overflow-x: auto;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;
-        scrollbar-color: var(--gold) rgba(246, 240, 223, 0.12);
-        scrollbar-width: thin;
-        padding: 4px max(16px, calc((100vw - 1180px) / 2)) 18px;
-      }
-
-      .track::-webkit-scrollbar {
-        height: 10px;
-      }
-
-      .track::-webkit-scrollbar-track {
-        background: rgba(246, 240, 223, 0.1);
-      }
-
-      .track::-webkit-scrollbar-thumb {
-        background: rgba(214, 168, 79, 0.72);
-        border-radius: 999px;
+        gap: 24px;
+        padding: clamp(18px, 3vw, 34px);
+        border: 1px solid rgba(246, 240, 223, 0.14);
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.18)),
+          linear-gradient(180deg, rgba(246, 240, 223, 0.045), rgba(246, 240, 223, 0.015)),
+          #151a17;
+        box-shadow:
+          0 24px 60px rgba(0, 0, 0, 0.38),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
       }
 
       .timeline-rule {
         position: relative;
-        height: 1px;
-        margin: 0 max(16px, calc((100vw - 1180px) / 2));
-        background: linear-gradient(90deg, transparent, rgba(214, 168, 79, 0.7), transparent);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(16px, 2.5vw, 28px);
+        align-items: end;
+        padding: 0 0 16px;
+        border-bottom: 1px solid rgba(214, 168, 79, 0.5);
       }
 
-      .timeline-rule::before,
       .timeline-rule::after {
         content: "";
         position: absolute;
-        top: -3px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--gold);
-      }
-
-      .timeline-rule::before {
         left: 0;
+        right: 0;
+        bottom: -4px;
+        height: 7px;
+        background:
+          radial-gradient(circle at 12.5% 50%, var(--gold) 0 3px, transparent 3.5px),
+          radial-gradient(circle at 37.5% 50%, var(--gold) 0 3px, transparent 3.5px),
+          radial-gradient(circle at 62.5% 50%, var(--gold) 0 3px, transparent 3.5px),
+          radial-gradient(circle at 87.5% 50%, var(--gold) 0 3px, transparent 3.5px);
       }
 
-      .timeline-rule::after {
-        right: 0;
+      .year {
+        color: var(--gold);
+        font-size: clamp(1.35rem, 3.4vw, 2.7rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .covers {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(16px, 2.5vw, 28px);
+        align-items: start;
       }
 
       .book {
         min-width: 0;
         display: grid;
         gap: 12px;
-        scroll-snap-align: center;
-      }
-
-      .year {
-        color: var(--gold);
-        font-size: clamp(1.45rem, 4vw, 3.1rem);
-        font-weight: 400;
-        line-height: 1;
-        letter-spacing: 0;
       }
 
       .cover-link {
@@ -200,19 +187,16 @@
         text-transform: uppercase;
       }
 
-      .hint {
-        margin: 0;
-        padding: 0 max(16px, calc((100vw - 1180px) / 2));
-        color: rgba(246, 240, 223, 0.56);
-        font: 0.72rem/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
+      @media (max-width: 900px) {
+        .timeline-rule,
+        .covers {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
 
-      @media (min-width: 1180px) {
-        .track {
-          padding-left: 0;
-          padding-right: 0;
+        .timeline-rule::after {
+          background:
+            radial-gradient(circle at 25% 50%, var(--gold) 0 3px, transparent 3.5px),
+            radial-gradient(circle at 75% 50%, var(--gold) 0 3px, transparent 3.5px);
         }
       }
 
@@ -221,8 +205,17 @@
           padding-top: 24px;
         }
 
-        .track {
-          grid-auto-columns: minmax(260px, 82vw);
+        .wall {
+          padding: 18px;
+        }
+
+        .timeline-rule,
+        .covers {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-rule {
+          display: none;
         }
 
         .caption {
@@ -237,16 +230,21 @@
         <p class="eyebrow">Atelier Nymphet</p>
         <h1>La Recherche</h1>
         <p class="deck">
-          Four A5 volumes arranged as a chronological carousel.
+          Four A5 volumes arranged as a gallery wall.
         </p>
       </header>
 
-      <section class="timeline" aria-label="La Recherche timeline carousel">
-        <div class="carousel">
-          <div class="timeline-rule" aria-hidden="true"></div>
-          <div class="track">
+      <section class="gallery" aria-label="La Recherche cover gallery">
+        <div class="wall">
+          <div class="timeline-rule" aria-label="Timeline">
+            <div class="year">2021</div>
+            <div class="year">2022</div>
+            <div class="year">2023</div>
+            <div class="year">2023-</div>
+          </div>
+
+          <div class="covers">
             <article class="book">
-              <div class="year">2021</div>
               <a class="cover-link" href="./covers/lola-a-novel-cover.jpg" aria-label="Open Lola cover">
                 <img class="cover" src="./covers/lola-a-novel-cover.jpg" alt="Cover of Lola">
               </a>
@@ -258,7 +256,6 @@
             </article>
 
             <article class="book">
-              <div class="year">2022</div>
               <a class="cover-link" href="./covers/the-trial-cover.png" aria-label="Open The Trial cover">
                 <img class="cover" src="./covers/the-trial-cover.png" alt="Cover of The Trial">
               </a>
@@ -270,7 +267,6 @@
             </article>
 
             <article class="book">
-              <div class="year">2023</div>
               <a class="cover-link" href="./covers/the-sentence-cover.png" aria-label="Open The Sentence cover">
                 <img class="cover" src="./covers/the-sentence-cover.png" alt="Cover of The Sentence">
               </a>
@@ -282,7 +278,6 @@
             </article>
 
             <article class="book">
-              <div class="year">2023-</div>
               <a class="cover-link" href="./covers/the-appeal-cover.png" aria-label="Open The Appeal cover">
                 <img class="cover" src="./covers/the-appeal-cover.png" alt="Cover of The Appeal">
               </a>
@@ -293,7 +288,6 @@
               </div>
             </article>
           </div>
-          <p class="hint">Scroll timeline</p>
         </div>
       </section>
     </main>
