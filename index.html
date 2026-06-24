@@ -19,8 +19,7 @@
         --line: rgba(255, 246, 223, 0.18);
         --tile: 210px;
         --gap: 28px;
-        --year-step: 320px;
-        --timeline-width: calc((21 * var(--year-step)) + var(--tile) + 56px);
+        --timeline-width: 3480px;
       }
 
       * {
@@ -114,17 +113,23 @@
       }
 
       .scale {
+        position: relative;
         min-width: var(--timeline-width);
-        display: grid;
-        grid-template-columns: repeat(22, var(--year-step));
-        gap: 0;
+        height: 30px;
         padding: 0 0 12px 0;
         border-bottom: 1px solid var(--line);
       }
 
       .year {
+        position: absolute;
+        left: var(--x);
+        transform: translateX(-50%);
         color: rgba(242, 201, 95, 0.72);
         font-size: 0.66rem;
+      }
+
+      .year:first-child {
+        transform: none;
       }
 
       .row {
@@ -175,7 +180,7 @@
         width: var(--tile);
         flex: 0 0 var(--tile);
         position: absolute;
-        left: calc((var(--year) * var(--year-step)) + var(--nudge, 0px));
+        left: calc(var(--x) + var(--nudge, 0px));
         top: 4px;
         scroll-snap-align: start;
       }
@@ -271,7 +276,7 @@
         :root {
           --tile: 178px;
           --gap: 18px;
-          --year-step: 320px;
+          --timeline-width: 3480px;
         }
 
         body {
@@ -313,7 +318,17 @@
     <main class="timeline shell" aria-label="AtelierNymphet 2005 to 2026 timeline">
       <div class="timeline-head lane-wrap" aria-hidden="true">
         <div class="scale">
-          <span class="year">2005</span><span class="year">2006</span><span class="year">2007</span><span class="year">2008</span><span class="year">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year">2020</span><span class="year">2021</span><span class="year">2022</span><span class="year">2023</span><span class="year">2024</span><span class="year">2025</span><span class="year">2026</span>
+          <span class="year" style="--x: 0px">2005</span>
+          <span class="year" style="--x: 300px">2006</span>
+          <span class="year" style="--x: 720px">2012</span>
+          <span class="year" style="--x: 1040px">2015</span>
+          <span class="year" style="--x: 1300px">2017</span>
+          <span class="year" style="--x: 1660px">2020</span>
+          <span class="year" style="--x: 1980px">2021</span>
+          <span class="year" style="--x: 2300px">2022</span>
+          <span class="year" style="--x: 2620px">2023</span>
+          <span class="year" style="--x: 2940px">2024</span>
+          <span class="year" style="--x: 3260px">2026</span>
         </div>
       </div>
 
@@ -325,16 +340,16 @@
         </div>
         <div class="lane-wrap">
           <div class="lane">
-            <article class="book" style="--year: 0"><a class="cover-link" href="/larecherche/covers/absinthe-cover.png"><img class="cover" src="/larecherche/covers/absinthe-cover.png" alt="Cover of Absinthe"></a><div class="caption"><p class="sequence">2005 / I</p><h3>Absinthe</h3></div></article>
-            <article class="book" style="--year: 9"><a class="cover-link" href="/larecherche/covers/isibella-cover.jpg"><img class="cover" src="/larecherche/covers/isibella-cover.jpg" alt="Cover of Isibella"></a><div class="caption"><p class="sequence">2014 / II</p><h3>Isibella</h3></div></article>
-            <article class="book" style="--year: 10"><a class="cover-link" href="/larecherche/covers/juliette-cover.png"><img class="cover" src="/larecherche/covers/juliette-cover.png" alt="Cover of Juliette"></a><div class="caption"><p class="sequence">2015 / II</p><h3>Juliette</h3></div></article>
-            <article class="book" style="--year: 12"><a class="cover-link" href="/larecherche/covers/brulee-cover.jpg"><img class="cover" src="/larecherche/covers/brulee-cover.jpg" alt="Cover placeholder for Brulee"></a><div class="caption"><p class="sequence">2017 / II-III</p><h3>Brulee</h3></div></article>
-            <article class="book" style="--year: 15"><a class="cover-link" href="/larecherche/covers/mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/mircalla-cover.jpg" alt="Cover of Mircalla"></a><div class="caption"><p class="sequence">2020 / III</p><h3>Mircalla</h3></div></article>
-            <article class="book" style="--year: 16"><a class="cover-link" href="/larecherche/covers/return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/return-to-the-chateau-cover.jpg" alt="Cover of Return to the Chateau"></a><div class="caption"><p class="sequence">2021 / III</p><h3>Return to the Chateau</h3></div></article>
-            <article class="book" style="--year: 16; --nudge: 232px"><a class="cover-link" href="/larecherche/covers/lola-a-novel-cover.jpg"><img class="cover" src="/larecherche/covers/lola-a-novel-cover.jpg" alt="Cover of Lola: A Novel"></a><div class="caption"><p class="sequence">2021 / IV</p><h3>Lola</h3></div></article>
-            <article class="book" style="--year: 17; --nudge: 142px"><a class="cover-link" href="/larecherche/covers/the-trial-cover.png"><img class="cover" src="/larecherche/covers/the-trial-cover.png" alt="Cover of The Trial"></a><div class="caption"><p class="sequence">2022 / IV</p><h3>The Trial</h3></div></article>
-            <article class="book" style="--year: 18; --nudge: 84px"><a class="cover-link" href="/larecherche/covers/the-sentence-cover.png"><img class="cover" src="/larecherche/covers/the-sentence-cover.png" alt="Cover of The Sentence"></a><div class="caption"><p class="sequence">2023 / IV</p><h3>The Sentence</h3></div></article>
-            <article class="book" style="--year: 19; --nudge: 28px"><a class="cover-link" href="/larecherche/covers/the-appeal-cover.png"><img class="cover" src="/larecherche/covers/the-appeal-cover.png" alt="Cover of The Appeal"></a><div class="caption"><p class="sequence">2024 / V</p><h3>The Appeal</h3></div></article>
+            <article class="book" style="--x: 0px"><a class="cover-link" href="/larecherche/covers/absinthe-cover.png"><img class="cover" src="/larecherche/covers/absinthe-cover.png" alt="Cover of Absinthe"></a><div class="caption"><p class="sequence">2005 / I</p><h3>Absinthe</h3></div></article>
+            <article class="book" style="--x: 300px"><a class="cover-link" href="/larecherche/covers/isibella-cover.jpg"><img class="cover" src="/larecherche/covers/isibella-cover.jpg" alt="Cover of Isibella"></a><div class="caption"><p class="sequence">2006-2012 / II</p><h3>Isibella</h3></div></article>
+            <article class="book" style="--x: 1040px"><a class="cover-link" href="/larecherche/covers/juliette-cover.png"><img class="cover" src="/larecherche/covers/juliette-cover.png" alt="Cover of Juliette"></a><div class="caption"><p class="sequence">2015 / II</p><h3>Juliette</h3></div></article>
+            <article class="book" style="--x: 1300px"><a class="cover-link" href="/larecherche/covers/brulee-cover.jpg"><img class="cover" src="/larecherche/covers/brulee-cover.jpg" alt="Cover of Brulee"></a><div class="caption"><p class="sequence">2011-2023 / II-III</p><h3>Brulee</h3></div></article>
+            <article class="book" style="--x: 720px"><a class="cover-link" href="/larecherche/covers/mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/mircalla-cover.jpg" alt="Cover of Mircalla"></a><div class="caption"><p class="sequence">2012 / III</p><h3>Mircalla</h3></div></article>
+            <article class="book" style="--x: 1660px"><a class="cover-link" href="/larecherche/covers/return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/return-to-the-chateau-cover.jpg" alt="Cover of Return to the Chateau"></a><div class="caption"><p class="sequence">2020-2021 / III</p><h3>Return to the Chateau</h3></div></article>
+            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/lola-a-novel-cover.jpg"><img class="cover" src="/larecherche/covers/lola-a-novel-cover.jpg" alt="Cover of Lola: A Novel"></a><div class="caption"><p class="sequence">2021-2022 / IV</p><h3>Lola</h3></div></article>
+            <article class="book" style="--x: 2300px"><a class="cover-link" href="/larecherche/covers/the-trial-cover.png"><img class="cover" src="/larecherche/covers/the-trial-cover.png" alt="Cover of The Trial"></a><div class="caption"><p class="sequence">2022-2023 / IV</p><h3>The Trial</h3></div></article>
+            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/the-sentence-cover.png"><img class="cover" src="/larecherche/covers/the-sentence-cover.png" alt="Cover of The Sentence"></a><div class="caption"><p class="sequence">2023 / IV</p><h3>The Sentence</h3></div></article>
+            <article class="book" style="--x: 2620px; --nudge: 232px"><a class="cover-link" href="/larecherche/covers/the-appeal-cover.png"><img class="cover" src="/larecherche/covers/the-appeal-cover.png" alt="Cover of The Appeal"></a><div class="caption"><p class="sequence">2023- / V</p><h3>The Appeal</h3></div></article>
           </div>
         </div>
       </section>
@@ -347,9 +362,9 @@
         </div>
         <div class="lane-wrap">
           <div class="lane">
-            <article class="book" style="--year: 16"><a class="cover-link" href="/larecherche/covers/diary-young-girl-cover.jpg"><img class="cover" src="/larecherche/covers/diary-young-girl-cover.jpg" alt="Cover placeholder for Diary of a Young Girl"></a><div class="caption"><p class="sequence">2021</p><h3>Diary of a Young Girl</h3></div></article>
-            <article class="book" style="--year: 18"><a class="cover-link" href="/larecherche/covers/diary-stalker-cover.jpg"><img class="cover" src="/larecherche/covers/diary-stalker-cover.jpg" alt="Cover placeholder for Diary of a Stalker"></a><div class="caption"><p class="sequence">2023</p><h3>Diary of a Stalker</h3></div></article>
-            <article class="book" style="--year: 21"><a class="cover-link" href="/larecherche/covers/the-opera-cover.jpg"><img class="cover" src="/larecherche/covers/the-opera-cover.jpg" alt="Cover placeholder for The Opera"></a><div class="caption"><p class="sequence">2026</p><h3>The Opera</h3></div></article>
+            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/diary-young-girl-cover.jpg"><img class="cover" src="/larecherche/covers/diary-young-girl-cover.jpg" alt="Cover placeholder for Diary of a Young Girl"></a><div class="caption"><p class="sequence">2021</p><h3>Diary of a Young Girl</h3></div></article>
+            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/diary-stalker-cover.jpg"><img class="cover" src="/larecherche/covers/diary-stalker-cover.jpg" alt="Cover placeholder for Diary of a Stalker"></a><div class="caption"><p class="sequence">2023</p><h3>Diary of a Stalker</h3></div></article>
+            <article class="book" style="--x: 3260px"><a class="cover-link" href="/larecherche/covers/the-opera-cover.jpg"><img class="cover" src="/larecherche/covers/the-opera-cover.jpg" alt="Cover placeholder for The Opera"></a><div class="caption"><p class="sequence">2026</p><h3>The Opera</h3></div></article>
           </div>
         </div>
       </section>
@@ -362,16 +377,16 @@
         </div>
         <div class="lane-wrap">
           <div class="lane">
-            <article class="book" style="--year: 0"><a class="cover-link" href="/larecherche/covers/tdw-absinthe-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-absinthe-cover.jpg" alt="Twenty Dollar Words pocket cover for Absinthe"></a><div class="caption"><p class="sequence">2005</p><h3>Absinthe</h3></div></article>
-            <article class="book" style="--year: 9"><a class="cover-link" href="/larecherche/covers/tdw-isibella-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-isibella-cover.jpg" alt="Twenty Dollar Words pocket cover for Isibella"></a><div class="caption"><p class="sequence">2014</p><h3>Isibella</h3></div></article>
-            <article class="book" style="--year: 10"><a class="cover-link" href="/larecherche/covers/tdw-juliette-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-juliette-cover.jpg" alt="Twenty Dollar Words pocket cover for Juliette"></a><div class="caption"><p class="sequence">2015</p><h3>Juliette</h3></div></article>
-            <article class="book" style="--year: 12"><a class="cover-link" href="/larecherche/covers/tdw-brulee-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-brulee-cover.jpg" alt="Twenty Dollar Words pocket cover for Brulee"></a><div class="caption"><p class="sequence">2017</p><h3>Brulee</h3></div></article>
-            <article class="book" style="--year: 15"><a class="cover-link" href="/larecherche/covers/tdw-mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-mircalla-cover.jpg" alt="Twenty Dollar Words pocket cover for Mircalla"></a><div class="caption"><p class="sequence">2020</p><h3>Mircalla</h3></div></article>
-            <article class="book" style="--year: 16"><a class="cover-link" href="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg" alt="Twenty Dollar Words pocket cover for Return to the Chateau"></a><div class="caption"><p class="sequence">2021</p><h3>Return</h3></div></article>
-            <article class="book" style="--year: 16; --nudge: 154px"><a class="cover-link" href="/larecherche/covers/tdw-lola-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-lola-cover.jpg" alt="Twenty Dollar Words pocket cover for Lola"></a><div class="caption"><p class="sequence">2021</p><h3>Lola</h3></div></article>
-            <article class="book" style="--year: 17; --nudge: 94px"><a class="cover-link" href="/larecherche/covers/tdw-the-trial-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-trial-cover.jpg" alt="Twenty Dollar Words pocket cover for The Trial"></a><div class="caption"><p class="sequence">2022</p><h3>The Trial</h3></div></article>
-            <article class="book" style="--year: 18; --nudge: 36px"><a class="cover-link" href="/larecherche/covers/tdw-the-sentence-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-sentence-cover.jpg" alt="Twenty Dollar Words pocket cover for The Sentence"></a><div class="caption"><p class="sequence">2023</p><h3>The Sentence</h3></div></article>
-            <article class="book" style="--year: 19"><a class="cover-link" href="/larecherche/covers/tdw-the-appeal-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-appeal-cover.jpg" alt="Twenty Dollar Words pocket cover for The Appeal"></a><div class="caption"><p class="sequence">2024</p><h3>The Appeal</h3></div></article>
+            <article class="book" style="--x: 0px"><a class="cover-link" href="/larecherche/covers/tdw-absinthe-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-absinthe-cover.jpg" alt="Twenty Dollar Words pocket cover for Absinthe"></a><div class="caption"><p class="sequence">2005</p><h3>Absinthe</h3></div></article>
+            <article class="book" style="--x: 300px"><a class="cover-link" href="/larecherche/covers/tdw-isibella-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-isibella-cover.jpg" alt="Twenty Dollar Words pocket cover for Isibella"></a><div class="caption"><p class="sequence">2006-2012</p><h3>Isibella</h3></div></article>
+            <article class="book" style="--x: 1040px"><a class="cover-link" href="/larecherche/covers/tdw-juliette-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-juliette-cover.jpg" alt="Twenty Dollar Words pocket cover for Juliette"></a><div class="caption"><p class="sequence">2015</p><h3>Juliette</h3></div></article>
+            <article class="book" style="--x: 1300px"><a class="cover-link" href="/larecherche/covers/tdw-brulee-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-brulee-cover.jpg" alt="Twenty Dollar Words pocket cover for Brulee"></a><div class="caption"><p class="sequence">2011-2023</p><h3>Brulee</h3></div></article>
+            <article class="book" style="--x: 720px"><a class="cover-link" href="/larecherche/covers/tdw-mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-mircalla-cover.jpg" alt="Twenty Dollar Words pocket cover for Mircalla"></a><div class="caption"><p class="sequence">2012</p><h3>Mircalla</h3></div></article>
+            <article class="book" style="--x: 1660px"><a class="cover-link" href="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg" alt="Twenty Dollar Words pocket cover for Return to the Chateau"></a><div class="caption"><p class="sequence">2020-2021</p><h3>Return</h3></div></article>
+            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/tdw-lola-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-lola-cover.jpg" alt="Twenty Dollar Words pocket cover for Lola"></a><div class="caption"><p class="sequence">2021-2022</p><h3>Lola</h3></div></article>
+            <article class="book" style="--x: 2300px"><a class="cover-link" href="/larecherche/covers/tdw-the-trial-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-trial-cover.jpg" alt="Twenty Dollar Words pocket cover for The Trial"></a><div class="caption"><p class="sequence">2022-2023</p><h3>The Trial</h3></div></article>
+            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/tdw-the-sentence-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-sentence-cover.jpg" alt="Twenty Dollar Words pocket cover for The Sentence"></a><div class="caption"><p class="sequence">2023</p><h3>The Sentence</h3></div></article>
+            <article class="book" style="--x: 2620px; --nudge: 154px"><a class="cover-link" href="/larecherche/covers/tdw-the-appeal-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-appeal-cover.jpg" alt="Twenty Dollar Words pocket cover for The Appeal"></a><div class="caption"><p class="sequence">2023-</p><h3>The Appeal</h3></div></article>
           </div>
         </div>
       </section>
