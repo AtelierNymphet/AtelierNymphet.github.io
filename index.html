@@ -10,409 +10,99 @@
       :root {
         color-scheme: dark;
         --ink: #fff6df;
-        --muted: #cfc1a6;
-        --dim: #8f8168;
+        --muted: #d7c7a7;
         --gold: #f2c95f;
-        --blue: #14264b;
-        --night: #07090b;
-        --panel: rgba(12, 16, 18, 0.74);
-        --line: rgba(255, 246, 223, 0.18);
-        --tile: 210px;
-        --gap: 28px;
-        --timeline-width: 3480px;
+        --line: rgba(255, 246, 223, 0.22);
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         margin: 0;
         min-height: 100vh;
         background:
-          linear-gradient(180deg, rgba(6, 9, 15, 0.3), rgba(6, 7, 8, 0.96) 520px),
-          url("/assets/faery-flight.jpeg") center top / min(1400px, 100vw) auto no-repeat,
-          radial-gradient(circle at 18% 5%, rgba(87, 132, 212, 0.28), transparent 28rem),
+          linear-gradient(180deg, rgba(6, 9, 15, 0.05), rgba(6, 7, 8, 0.42) 46%, rgba(6, 7, 8, 0.96)),
+          url("/assets/faery-flight.jpeg") center top / cover no-repeat,
           #07090b;
         color: var(--ink);
         font-family: Georgia, "Times New Roman", serif;
       }
 
-      a {
-        color: inherit;
-      }
-
-      .shell {
-        width: min(1480px, calc(100vw - 32px));
+      main {
+        width: min(1180px, calc(100vw - 34px));
+        min-height: 100vh;
         margin: 0 auto;
-      }
-
-      .hero {
-        min-height: min(72vw, 700px);
         display: grid;
         align-items: end;
-        padding: clamp(34px, 6vw, 82px) 0 34px;
+        padding: clamp(34px, 6vw, 84px) 0;
       }
 
-      .hero-card {
+      .card {
         width: min(760px, 100%);
-        padding: clamp(22px, 3vw, 34px);
-        border: 1px solid rgba(255, 246, 223, 0.22);
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid var(--line);
         background:
-          linear-gradient(135deg, rgba(255, 246, 223, 0.1), transparent 36%),
+          linear-gradient(135deg, rgba(255, 246, 223, 0.12), transparent 38%),
           rgba(3, 7, 13, 0.72);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.44);
         backdrop-filter: blur(10px);
-      }
-
-      .eyebrow,
-      .kicker,
-      .sequence,
-      .year {
-        color: var(--gold);
-        font: 700 0.74rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
       }
 
       .eyebrow {
         margin: 0 0 12px;
+        color: var(--gold);
+        font: 700 0.78rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
       }
 
       h1 {
         margin: 0;
-        font-size: clamp(3.3rem, 10vw, 8.6rem);
+        font-size: clamp(3.5rem, 11vw, 8.8rem);
         font-weight: 400;
-        line-height: 0.84;
-        letter-spacing: -0.07em;
+        line-height: 0.82;
+        letter-spacing: -0.075em;
       }
 
-      .deck {
-        max-width: 620px;
-        margin: 20px 0 0;
+      p {
+        max-width: 610px;
+        margin: 22px 0 0;
         color: var(--muted);
-        font-size: clamp(1rem, 1.8vw, 1.32rem);
+        font-size: clamp(1.05rem, 1.8vw, 1.35rem);
         line-height: 1.45;
       }
 
-      .timeline {
-        padding: 22px 0 70px;
-      }
-
-      .timeline-head {
-        position: sticky;
-        top: 0;
-        z-index: 4;
-        padding: 16px 0 14px;
-        background: linear-gradient(180deg, rgba(7, 9, 11, 0.97), rgba(7, 9, 11, 0.78));
-        backdrop-filter: blur(16px);
-      }
-
-      .scale {
-        position: relative;
-        min-width: var(--timeline-width);
-        height: 30px;
-        padding: 0 0 12px 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .year {
-        position: absolute;
-        left: var(--x);
-        transform: translateX(-50%);
-        color: rgba(242, 201, 95, 0.72);
-        font-size: 0.66rem;
-      }
-
-      .year:first-child {
-        transform: none;
-      }
-
-      .row {
-        display: grid;
-        grid-template-columns: 118px 1fr;
-        gap: 30px;
-        align-items: start;
-        padding: 26px 0 34px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .row-title {
-        position: sticky;
-        left: 0;
-        z-index: 3;
-        padding-top: 18px;
-        background: linear-gradient(90deg, #07090b 72%, transparent);
-      }
-
-      .row-title h2 {
-        margin: 0;
-        font-size: clamp(1.4rem, 2vw, 2rem);
-        font-weight: 400;
-        line-height: 0.98;
-      }
-
-      .row-title p {
-        margin: 8px 0 0;
-        color: var(--dim);
-        font: 0.78rem/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      .lane-wrap {
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        scroll-snap-type: inline proximity;
-        scrollbar-color: rgba(242, 201, 95, 0.75) rgba(255, 246, 223, 0.08);
-      }
-
-      .lane {
-        position: relative;
-        min-width: var(--timeline-width);
-        height: 405px;
-        padding: 4px 0 16px 0;
-      }
-
-      .book {
-        width: var(--tile);
-        flex: 0 0 var(--tile);
-        position: absolute;
-        left: calc(var(--x) + var(--nudge, 0px));
-        top: 4px;
-        scroll-snap-align: start;
-      }
-
-      .cover-link {
-        display: block;
-        position: relative;
-        border: 1px solid rgba(255, 246, 223, 0.22);
-        background: #090b0d;
-        box-shadow:
-          0 22px 45px rgba(0, 0, 0, 0.44),
-          inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        overflow: hidden;
+      .enter {
+        display: inline-block;
+        margin-top: 30px;
+        border: 1px solid rgba(242, 201, 95, 0.72);
+        border-radius: 999px;
+        padding: 13px 18px;
+        color: var(--ink);
+        font: 700 0.78rem/1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.16em;
         text-decoration: none;
-        transition: transform 160ms ease, border-color 160ms ease;
+        text-transform: uppercase;
+        background: rgba(242, 201, 95, 0.1);
       }
 
-      .cover-link:hover {
-        border-color: rgba(242, 201, 95, 0.76);
-        transform: translateY(-5px);
-      }
-
-      .cover-link::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background:
-          linear-gradient(115deg, rgba(255, 255, 255, 0.12), transparent 22%, transparent 76%, rgba(0, 0, 0, 0.32)),
-          linear-gradient(180deg, transparent 72%, rgba(0, 0, 0, 0.5));
-      }
-
-      .cover {
-        display: block;
-        width: 100%;
-        aspect-ratio: 148 / 210;
-        object-fit: cover;
-      }
-
-      .other .book {
-        width: 178px;
-        flex-basis: 178px;
-      }
-
-      .other .lane {
-        height: 352px;
-      }
-
-      .tdw .book {
-        width: 142px;
-        flex-basis: 142px;
-      }
-
-      .tdw .lane {
-        height: 310px;
-      }
-
-      .tdw .cover-link {
-        border-color: rgba(242, 201, 95, 0.34);
-        border-radius: 3px;
-      }
-
-      .caption {
-        display: grid;
-        gap: 5px;
-        padding-top: 10px;
-      }
-
-      .sequence {
-        margin: 0;
-        color: rgba(242, 201, 95, 0.76);
-        font-size: 0.62rem;
-      }
-
-      .caption h3 {
-        margin: 0;
-        font-size: 1.18rem;
-        font-weight: 400;
-        line-height: 1.05;
-      }
-
-      .tdw .caption h3 {
-        font-size: 0.98rem;
-      }
-
-      .foot {
-        padding: 0 0 46px;
-        color: var(--dim);
-        font: 0.86rem/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      @media (max-width: 760px) {
-        :root {
-          --tile: 178px;
-          --gap: 18px;
-          --timeline-width: 3480px;
-        }
-
-        body {
-          background-size: auto 360px, auto;
-        }
-
-        .hero {
-          min-height: 470px;
-        }
-
-        .row {
-          grid-template-columns: 1fr;
-          gap: 12px;
-        }
-
-        .row-title {
-          position: static;
-          background: none;
-        }
-
-        .scale,
-        .lane {
-          min-width: var(--timeline-width);
-        }
+      .enter:hover {
+        background: rgba(242, 201, 95, 0.2);
       }
     </style>
   </head>
   <body>
-    <header class="hero shell">
-      <div class="hero-card">
+    <main>
+      <section class="card" aria-label="AtelierNymphet entrance">
         <p class="eyebrow">Atelier Nymphet</p>
         <h1>The Works</h1>
-        <p class="deck">
-          A 2005-2026 passage through novels, companion books, and private source ledgers.
+        <p>
+          A studio of novels, source ledgers, faery courts, pocket books, and private archives.
         </p>
-      </div>
-    </header>
-
-    <main class="timeline shell" aria-label="AtelierNymphet 2005 to 2026 timeline">
-      <div class="timeline-head lane-wrap" aria-hidden="true">
-        <div class="scale">
-          <span class="year" style="--x: 0px">2005</span>
-          <span class="year" style="--x: 300px">2006</span>
-          <span class="year" style="--x: 720px">2012</span>
-          <span class="year" style="--x: 1040px">2015</span>
-          <span class="year" style="--x: 1300px">2017</span>
-          <span class="year" style="--x: 1660px">2020</span>
-          <span class="year" style="--x: 1980px">2021</span>
-          <span class="year" style="--x: 2300px">2022</span>
-          <span class="year" style="--x: 2620px">2023</span>
-          <span class="year" style="--x: 2940px">2024</span>
-          <span class="year" style="--x: 3260px">2026</span>
-        </div>
-      </div>
-
-      <section class="row novels" aria-labelledby="novels-title">
-        <div class="row-title">
-          <p class="kicker">Top Row</p>
-          <h2 id="novels-title">Novels</h2>
-          <p>La Recherche arc</p>
-        </div>
-        <div class="lane-wrap">
-          <div class="lane">
-            <article class="book" style="--x: 0px"><a class="cover-link" href="/larecherche/covers/absinthe-cover.png"><img class="cover" src="/larecherche/covers/absinthe-cover.png" alt="Cover of Absinthe"></a><div class="caption"><p class="sequence">2005 / I</p><h3>Absinthe</h3></div></article>
-            <article class="book" style="--x: 300px"><a class="cover-link" href="/larecherche/covers/isibella-cover.jpg"><img class="cover" src="/larecherche/covers/isibella-cover.jpg" alt="Cover of Isibella"></a><div class="caption"><p class="sequence">2006-2012 / II</p><h3>Isibella</h3></div></article>
-            <article class="book" style="--x: 1300px"><a class="cover-link" href="/larecherche/covers/brulee-cover.jpg"><img class="cover" src="/larecherche/covers/brulee-cover.jpg" alt="Cover of Brulee"></a><div class="caption"><p class="sequence">2011-2023 / II-III</p><h3>Brulee</h3></div></article>
-            <article class="book" style="--x: 720px"><a class="cover-link" href="/larecherche/covers/mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/mircalla-cover.jpg" alt="Cover of Mircalla"></a><div class="caption"><p class="sequence">2012 / III</p><h3>Mircalla</h3></div></article>
-            <article class="book" style="--x: 1660px"><a class="cover-link" href="/larecherche/covers/return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/return-to-the-chateau-cover.jpg" alt="Cover of Return to the Chateau"></a><div class="caption"><p class="sequence">2020-2021 / III</p><h3>Return to the Chateau</h3></div></article>
-            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/lola-a-novel-cover.jpg"><img class="cover" src="/larecherche/covers/lola-a-novel-cover.jpg" alt="Cover of Lola: A Novel"></a><div class="caption"><p class="sequence">2021-2022 / IV</p><h3>Lola</h3></div></article>
-            <article class="book" style="--x: 2300px"><a class="cover-link" href="/larecherche/covers/the-trial-cover.png"><img class="cover" src="/larecherche/covers/the-trial-cover.png" alt="Cover of The Trial"></a><div class="caption"><p class="sequence">2022-2023 / IV</p><h3>The Trial</h3></div></article>
-            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/the-sentence-cover.png"><img class="cover" src="/larecherche/covers/the-sentence-cover.png" alt="Cover of The Sentence"></a><div class="caption"><p class="sequence">2023 / IV</p><h3>The Sentence</h3></div></article>
-            <article class="book" style="--x: 2620px; --nudge: 232px"><a class="cover-link" href="/larecherche/covers/the-appeal-cover.png"><img class="cover" src="/larecherche/covers/the-appeal-cover.png" alt="Cover of The Appeal"></a><div class="caption"><p class="sequence">2023- / V</p><h3>The Appeal</h3></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="row other" aria-labelledby="other-title">
-        <div class="row-title">
-          <p class="kicker">Second Row</p>
-          <h2 id="other-title">Other Books</h2>
-          <p>Companions</p>
-        </div>
-        <div class="lane-wrap">
-          <div class="lane">
-            <article class="book" style="--x: 1040px"><a class="cover-link" href="/larecherche/covers/juliette-cover.png"><img class="cover" src="/larecherche/covers/juliette-cover.png" alt="Cover of Juliette"></a><div class="caption"><p class="sequence">2015</p><h3>Juliette</h3></div></article>
-            <article class="book" style="--x: 1300px"><a class="cover-link" href="/larecherche/covers/madeleine-cover.png"><img class="cover" src="/larecherche/covers/madeleine-cover.png" alt="Cover of Madeleine"></a><div class="caption"><p class="sequence">2017-2021</p><h3>Madeleine</h3></div></article>
-            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/diary-young-girl-cover.jpg"><img class="cover" src="/larecherche/covers/diary-young-girl-cover.jpg" alt="Cover placeholder for Diary of a Young Girl"></a><div class="caption"><p class="sequence">2021</p><h3>Diary of a Young Girl</h3></div></article>
-            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/diary-stalker-cover.jpg"><img class="cover" src="/larecherche/covers/diary-stalker-cover.jpg" alt="Cover placeholder for Diary of a Stalker"></a><div class="caption"><p class="sequence">2023</p><h3>Diary of a Stalker</h3></div></article>
-            <article class="book" style="--x: 3260px"><a class="cover-link" href="/larecherche/covers/the-opera-cover.jpg"><img class="cover" src="/larecherche/covers/the-opera-cover.jpg" alt="Cover placeholder for The Opera"></a><div class="caption"><p class="sequence">2026</p><h3>The Opera</h3></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="row tdw" aria-labelledby="tdw-title">
-        <div class="row-title">
-          <p class="kicker">Third Row</p>
-          <h2 id="tdw-title">TDW</h2>
-          <p>Pocket ledgers</p>
-        </div>
-        <div class="lane-wrap">
-          <div class="lane">
-            <article class="book" style="--x: 0px"><a class="cover-link" href="/larecherche/covers/tdw-absinthe-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-absinthe-cover.jpg" alt="Twenty Dollar Words pocket cover for Absinthe"></a><div class="caption"><p class="sequence">2005</p><h3>Absinthe</h3></div></article>
-            <article class="book" style="--x: 300px"><a class="cover-link" href="/larecherche/covers/tdw-isibella-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-isibella-cover.jpg" alt="Twenty Dollar Words pocket cover for Isibella"></a><div class="caption"><p class="sequence">2006-2012</p><h3>Isibella</h3></div></article>
-            <article class="book" style="--x: 1040px"><a class="cover-link" href="/larecherche/covers/tdw-juliette-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-juliette-cover.jpg" alt="Twenty Dollar Words pocket cover for Juliette"></a><div class="caption"><p class="sequence">2015</p><h3>Juliette</h3></div></article>
-            <article class="book" style="--x: 1300px"><a class="cover-link" href="/larecherche/covers/tdw-brulee-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-brulee-cover.jpg" alt="Twenty Dollar Words pocket cover for Brulee"></a><div class="caption"><p class="sequence">2011-2023</p><h3>Brulee</h3></div></article>
-            <article class="book" style="--x: 1300px; --nudge: 154px"><a class="cover-link" href="/larecherche/covers/tdw-madeleine-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-madeleine-cover.jpg" alt="Twenty Dollar Words pocket cover for Madeleine"></a><div class="caption"><p class="sequence">2017-2021</p><h3>Madeleine</h3></div></article>
-            <article class="book" style="--x: 720px"><a class="cover-link" href="/larecherche/covers/tdw-mircalla-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-mircalla-cover.jpg" alt="Twenty Dollar Words pocket cover for Mircalla"></a><div class="caption"><p class="sequence">2012</p><h3>Mircalla</h3></div></article>
-            <article class="book" style="--x: 1660px"><a class="cover-link" href="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-return-to-the-chateau-cover.jpg" alt="Twenty Dollar Words pocket cover for Return to the Chateau"></a><div class="caption"><p class="sequence">2020-2021</p><h3>Return</h3></div></article>
-            <article class="book" style="--x: 1980px"><a class="cover-link" href="/larecherche/covers/tdw-lola-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-lola-cover.jpg" alt="Twenty Dollar Words pocket cover for Lola"></a><div class="caption"><p class="sequence">2021-2022</p><h3>Lola</h3></div></article>
-            <article class="book" style="--x: 2300px"><a class="cover-link" href="/larecherche/covers/tdw-the-trial-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-trial-cover.jpg" alt="Twenty Dollar Words pocket cover for The Trial"></a><div class="caption"><p class="sequence">2022-2023</p><h3>The Trial</h3></div></article>
-            <article class="book" style="--x: 2620px"><a class="cover-link" href="/larecherche/covers/tdw-the-sentence-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-sentence-cover.jpg" alt="Twenty Dollar Words pocket cover for The Sentence"></a><div class="caption"><p class="sequence">2023</p><h3>The Sentence</h3></div></article>
-            <article class="book" style="--x: 2620px; --nudge: 154px"><a class="cover-link" href="/larecherche/covers/tdw-the-appeal-cover.jpg"><img class="cover" src="/larecherche/covers/tdw-the-appeal-cover.jpg" alt="Twenty Dollar Words pocket cover for The Appeal"></a><div class="caption"><p class="sequence">2023-</p><h3>The Appeal</h3></div></article>
-          </div>
-        </div>
+        <a class="enter" href="/larecherche/">Enter La Recherche</a>
       </section>
     </main>
-
-    <footer class="foot shell">
-      TDW covers mark private source ledgers only. No Twenty Dollar Words texts are published here.
-    </footer>
-    <script>
-      const syncedTimelines = Array.from(document.querySelectorAll(".lane-wrap"));
-      let activeSync = false;
-
-      for (const timeline of syncedTimelines) {
-        timeline.addEventListener("scroll", () => {
-          if (activeSync) return;
-          activeSync = true;
-          for (const other of syncedTimelines) {
-            if (other !== timeline) other.scrollLeft = timeline.scrollLeft;
-          }
-          requestAnimationFrame(() => {
-            activeSync = false;
-          });
-        }, { passive: true });
-      }
-    </script>
   </body>
 </html>
