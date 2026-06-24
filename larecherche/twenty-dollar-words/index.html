@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twenty Dollar Words | AtelierNymphet</title>
+    <link rel="canonical" href="https://ateliernymphet.com/larecherche/twenty-dollar-words/">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./config.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #fff6df;
+        --muted: #c9b99b;
+        --gold: #f2c95f;
+        --paper: #1b1711;
+        --line: rgba(255, 246, 223, 0.18);
+        --panel: rgba(7, 8, 9, 0.78);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(4, 5, 6, 0.2), rgba(4, 5, 6, 0.96) 460px),
+          url("/assets/faery-flight.jpeg") center top / min(1300px, 100vw) auto no-repeat,
+          #07090b;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 8vw, 120px) 0 72px;
+      }
+
+      .hero {
+        max-width: 780px;
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+        backdrop-filter: blur(10px);
+      }
+
+      .eyebrow,
+      label,
+      button {
+        font: 700 0.74rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow { margin: 0 0 10px; color: var(--gold); }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 9vw, 7.4rem);
+        font-weight: 400;
+        line-height: 0.84;
+        letter-spacing: -0.06em;
+      }
+
+      p { color: var(--muted); font-size: 1.08rem; line-height: 1.5; }
+
+      .panel {
+        margin-top: 26px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        background: rgba(10, 9, 7, 0.78);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        border: 1px solid rgba(255, 246, 223, 0.26);
+        border-radius: 0;
+        padding: 12px;
+        background: #0d0d0c;
+        color: var(--ink);
+        font: 1rem/1.2 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      label { display: grid; gap: 7px; color: var(--gold); }
+
+      button {
+        align-self: end;
+        border: 1px solid rgba(242, 201, 95, 0.72);
+        padding: 13px 16px;
+        background: rgba(242, 201, 95, 0.12);
+        color: var(--ink);
+        cursor: pointer;
+      }
+
+      button:hover { background: rgba(242, 201, 95, 0.22); }
+
+      .results {
+        display: grid;
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .result {
+        padding: 18px;
+        border: 1px solid rgba(242, 201, 95, 0.22);
+        background:
+          linear-gradient(90deg, rgba(242, 201, 95, 0.08), transparent 18%),
+          var(--paper);
+      }
+
+      .ref {
+        overflow-wrap: anywhere;
+        color: var(--gold);
+        font: 0.76rem/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      .snippet {
+        margin: 10px 0 0;
+        color: var(--ink);
+      }
+
+      .status {
+        margin-top: 12px;
+        color: var(--muted);
+        font: 0.9rem/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .config {
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .grid,
+        .config {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Private Source Browser</p>
+        <h1>Twenty Dollar Words</h1>
+        <p>
+          Authenticated search over private TDW source chunks. EPUB packages remain private storage artifacts; this page returns bounded snippets and canonical references only.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div id="config" class="config">
+          <label>Supabase URL
+            <input id="supabase-url" placeholder="https://...supabase.co">
+          </label>
+          <label>Anon Key
+            <input id="supabase-anon-key" placeholder="public anon key">
+          </label>
+        </div>
+        <div class="grid">
+          <label>Email
+            <input id="email" type="email" autocomplete="email">
+          </label>
+          <label>Password
+            <input id="password" type="password" autocomplete="current-password">
+          </label>
+          <label>Work
+            <select id="work">
+              <option value="">All TDW</option>
+              <option value="absinthe">Absinthe</option>
+              <option value="isibella">Isibella</option>
+              <option value="mircalla">Mircalla</option>
+              <option value="return-to-the-chateau">Return to the Chateau</option>
+            </select>
+          </label>
+          <button id="signin">Sign In</button>
+        </div>
+        <div class="grid" style="margin-top:14px; grid-template-columns: 1fr 180px;">
+          <label>Search
+            <input id="query" placeholder="Search private source snippets">
+          </label>
+          <button id="search">Search</button>
+        </div>
+        <div id="status" class="status">Not signed in.</div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <script>
+      const stored = JSON.parse(localStorage.getItem("atelierSupabaseConfig") || "{}");
+      const config = window.ATELIER_SUPABASE_CONFIG || stored;
+      const configBox = document.getElementById("config");
+      const statusEl = document.getElementById("status");
+      const resultsEl = document.getElementById("results");
+      const urlEl = document.getElementById("supabase-url");
+      const keyEl = document.getElementById("supabase-anon-key");
+      urlEl.value = config.url || "";
+      keyEl.value = config.anonKey || "";
+      if (!config.url || !config.anonKey) configBox.style.display = "grid";
+
+      let client = null;
+      let session = null;
+
+      function getClient() {
+        const url = urlEl.value.trim() || config.url;
+        const anonKey = keyEl.value.trim() || config.anonKey;
+        if (!url || !anonKey) throw new Error("Supabase URL and anon key are required.");
+        localStorage.setItem("atelierSupabaseConfig", JSON.stringify({ url, anonKey }));
+        client = client || window.supabase.createClient(url, anonKey);
+        return client;
+      }
+
+      function setStatus(message) {
+        statusEl.textContent = message;
+      }
+
+      document.getElementById("signin").addEventListener("click", async () => {
+        try {
+          const supabase = getClient();
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+          const result = await supabase.auth.signInWithPassword({ email, password });
+          if (result.error) throw result.error;
+          session = result.data.session;
+          setStatus(`Signed in as ${email}.`);
+        } catch (error) {
+          setStatus(error.message);
+        }
+      });
+
+      document.getElementById("search").addEventListener("click", async () => {
+        try {
+          const supabase = getClient();
+          if (!session) {
+            const current = await supabase.auth.getSession();
+            session = current.data.session;
+          }
+          if (!session) throw new Error("Sign in first.");
+          setStatus("Searching...");
+          resultsEl.innerHTML = "";
+          const endpoint = `${urlEl.value.trim() || config.url}/functions/v1/tdw-browse`;
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              "authorization": `Bearer ${session.access_token}`,
+              "apikey": keyEl.value.trim() || config.anonKey,
+            },
+            body: JSON.stringify({
+              query: document.getElementById("query").value.trim(),
+              work_slug: document.getElementById("work").value || null,
+              limit: 25,
+            }),
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.message || data.error || "Search failed.");
+          setStatus(`${data.count} result(s).`);
+          resultsEl.innerHTML = data.results.map((item) => `
+            <article class="result">
+              <div class="ref">${item.canonical_ref}</div>
+              <p class="snippet">${escapeHtml(item.snippet || "")}</p>
+            </article>
+          `).join("");
+        } catch (error) {
+          setStatus(error.message);
+        }
+      });
+
+      function escapeHtml(value) {
+        return value.replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;",
+        }[char]));
+      }
+    </script>
+  </body>
+</html>

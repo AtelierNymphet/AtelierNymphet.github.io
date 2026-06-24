@@ -105,6 +105,30 @@ async function fetchGitHubText(ref: QuoteReference): Promise<{ text: string; sha
   };
 }
 
+async function fetchStorageText(ref: QuoteReference): Promise<{ text: string; sha: string | null } | null> {
+  const bucket = ref.metadata?.storage_bucket;
+  const objectPath = ref.metadata?.source_text_object_path;
+  if (typeof bucket !== "string" || typeof objectPath !== "string") return null;
+  const supabaseUrl = env("SUPABASE_URL").replace(/\/$/, "");
+  const serviceKey = env("SUPABASE_SERVICE_ROLE_KEY");
+  const response = await fetch(
+    `${supabaseUrl}/storage/v1/object/${encodeURIComponent(bucket)}/${objectPath.split("/").map(encodeURIComponent).join("/")}`,
+    {
+      headers: {
+        apikey: serviceKey,
+        authorization: `Bearer ${serviceKey}`,
+      },
+    },
+  );
+  if (!response.ok) {
+    throw new Error(`Supabase storage quote fetch failed: ${response.status} ${await response.text()}`);
+  }
+  return {
+    text: await response.text(),
+    sha: response.headers.get("etag"),
+  };
+}
+
 function extractQuote(text: string, ref: QuoteReference): string {
   const start = ref.char_start ?? 0;
   const requestedEnd = ref.char_end ?? Math.min(text.length, start + ref.quote_max_chars);
@@ -129,7 +153,7 @@ Deno.serve(async (req) => {
       return jsonResponse({ error: "not_found_or_not_entitled" }, 404);
     }
 
-    const source = await fetchGitHubText(quoteRef);
+    const source = await fetchStorageText(quoteRef) ?? await fetchGitHubText(quoteRef);
     const quote = extractQuote(source.text, quoteRef);
 
     return jsonResponse({
