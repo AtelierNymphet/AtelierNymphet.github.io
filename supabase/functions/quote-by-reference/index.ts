@@ -55,16 +55,37 @@ async function requestRef(req: Request): Promise<string | null> {
   return null;
 }
 
-async function lookupQuoteReference(canonicalRef: string, authorization: string | null): Promise<QuoteReference | null> {
+async function isTdwAdmin(authorization: string | null): Promise<boolean> {
+  if (!authorization) return false;
+  const allowlist = (Deno.env.get("ATELIER_TDW_ADMIN_EMAILS") || "")
+    .split(",")
+    .map((item) => item.trim().toLowerCase())
+    .filter(Boolean);
+  if (!allowlist.length) return false;
   const supabaseUrl = env("SUPABASE_URL").replace(/\/$/, "");
   const anonKey = env("SUPABASE_ANON_KEY");
+  const response = await fetch(`${supabaseUrl}/auth/v1/user`, {
+    headers: {
+      apikey: anonKey,
+      authorization,
+    },
+  });
+  if (!response.ok) return false;
+  const user = await response.json();
+  return allowlist.includes(String(user.email || "").toLowerCase());
+}
+
+async function lookupQuoteReference(canonicalRef: string, authorization: string | null, serviceRole = false): Promise<QuoteReference | null> {
+  const supabaseUrl = env("SUPABASE_URL").replace(/\/$/, "");
+  const anonKey = env("SUPABASE_ANON_KEY");
+  const serviceKey = serviceRole ? env("SUPABASE_SERVICE_ROLE_KEY") : null;
   const encoded = encodeURIComponent(canonicalRef);
   const response = await fetch(
     `${supabaseUrl}/rest/v1/quote_references?canonical_ref=eq.${encoded}&select=*`,
     {
       headers: {
-        apikey: anonKey,
-        authorization: authorization || `Bearer ${anonKey}`,
+        apikey: serviceKey || anonKey,
+        authorization: serviceKey ? `Bearer ${serviceKey}` : authorization || `Bearer ${anonKey}`,
       },
     },
   );
@@ -148,7 +169,11 @@ Deno.serve(async (req) => {
       return jsonResponse({ error: "missing_ref" }, 400);
     }
 
-    const quoteRef = await lookupQuoteReference(canonicalRef, req.headers.get("authorization"));
+    const authorization = req.headers.get("authorization");
+    let quoteRef = await lookupQuoteReference(canonicalRef, authorization);
+    if (!quoteRef && await isTdwAdmin(authorization)) {
+      quoteRef = await lookupQuoteReference(canonicalRef, authorization, true);
+    }
     if (!quoteRef) {
       return jsonResponse({ error: "not_found_or_not_entitled" }, 404);
     }
