@@ -17,7 +17,8 @@
         --night: #07090b;
         --panel: rgba(12, 16, 18, 0.74);
         --line: rgba(255, 246, 223, 0.18);
-        --tile: 210px;
+        --tile: 220px;
+        --major-tile: clamp(260px, 23vw, 390px);
         --gap: 28px;
       }
 
@@ -100,7 +101,7 @@
 
       .gallery {
         display: grid;
-        gap: 34px;
+        gap: 42px;
         padding: 22px 0 70px;
       }
 
@@ -140,8 +141,17 @@
         align-items: start;
       }
 
+      .novels .lane {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--major-tile), 100%), 1fr));
+        gap: 42px 32px;
+      }
+
       .book {
         width: min(var(--tile), 100%);
+      }
+
+      .novels .book {
+        width: min(var(--major-tile), 100%);
       }
 
       .cover-link {
@@ -176,7 +186,33 @@
         display: block;
         width: 100%;
         aspect-ratio: 148 / 210;
-        object-fit: cover;
+        object-fit: contain;
+        background: #07090b;
+      }
+
+      .novels .cover-link {
+        border-color: rgba(255, 246, 223, 0.3);
+        box-shadow:
+          0 34px 70px rgba(0, 0, 0, 0.52),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .novels .cover-link::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 7%;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 35%),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.42), transparent 72%);
+        mix-blend-mode: screen;
+        opacity: 0.48;
+      }
+
+      .novels .caption h3 {
+        font-size: clamp(1.35rem, 2vw, 2.08rem);
       }
 
       .other .book {
@@ -275,8 +311,8 @@
     <main class="gallery shell" aria-label="AtelierNymphet works gallery">
       <section class="row novels" aria-labelledby="novels-title">
         <div class="row-title">
-          <p class="kicker">Top Row</p>
-          <h2 id="novels-title">Novels</h2>
+          <p class="kicker">Large Format</p>
+          <h2 id="novels-title">Major Works</h2>
           <p>La Recherche arc</p>
         </div>
         <div class="lane-wrap">
