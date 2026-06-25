@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T01:34:30+00:00",
+  "generated_at": "2026-06-25T01:51:21+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
   "purchase_policy": "Only products with approved price, purchase URL, and live Lulu validation are marked purchasable.",
@@ -15,17 +15,17 @@
       "estimated_print_cost_usd": "49.06",
       "proposed_list_price_usd": "69.00",
       "estimated_margin_before_shipping_tax_usd": "19.94",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -39,17 +39,17 @@
       "estimated_print_cost_usd": "49.06",
       "proposed_list_price_usd": "69.00",
       "estimated_margin_before_shipping_tax_usd": "19.94",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -63,17 +63,17 @@
       "estimated_print_cost_usd": "49.06",
       "proposed_list_price_usd": "69.00",
       "estimated_margin_before_shipping_tax_usd": "19.94",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -87,17 +87,17 @@
       "estimated_print_cost_usd": "34.02",
       "proposed_list_price_usd": "49.00",
       "estimated_margin_before_shipping_tax_usd": "14.98",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "49.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -111,17 +111,17 @@
       "estimated_print_cost_usd": "10.86",
       "proposed_list_price_usd": "18.00",
       "estimated_margin_before_shipping_tax_usd": "7.14",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "18.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -135,13 +135,18 @@
       "estimated_print_cost_usd": "12.40",
       "proposed_list_price_usd": "29.00",
       "estimated_margin_before_shipping_tax_usd": "16.60",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
-      "validation_label": "Live Lulu validation pending",
-      "validation_status": {}
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
+      "validation_label": "Dry run ready",
+      "validation_status": {
+        "dry_run": true,
+        "environment": "sandbox",
+        "status": "dry_run_ready",
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
+      }
     },
     {
       "work_id": "return-to-the-chateau",
@@ -154,17 +159,17 @@
       "estimated_print_cost_usd": "13.36",
       "proposed_list_price_usd": "29.00",
       "estimated_margin_before_shipping_tax_usd": "15.64",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -178,17 +183,17 @@
       "estimated_print_cost_usd": "16.19",
       "proposed_list_price_usd": "39.00",
       "estimated_margin_before_shipping_tax_usd": "22.81",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "39.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -202,17 +207,17 @@
       "estimated_print_cost_usd": "12.06",
       "proposed_list_price_usd": "29.00",
       "estimated_margin_before_shipping_tax_usd": "16.94",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -226,17 +231,17 @@
       "estimated_print_cost_usd": "11.44",
       "proposed_list_price_usd": "24.00",
       "estimated_margin_before_shipping_tax_usd": "12.56",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "24.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -250,17 +255,17 @@
       "estimated_print_cost_usd": "10.84",
       "proposed_list_price_usd": "19.00",
       "estimated_margin_before_shipping_tax_usd": "8.16",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     },
     {
@@ -274,17 +279,17 @@
       "estimated_print_cost_usd": "13.04",
       "proposed_list_price_usd": "29.00",
       "estimated_margin_before_shipping_tax_usd": "15.96",
-      "approved_list_price_usd": "",
+      "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "can_purchase": false,
-      "status": "pending_price_approval",
-      "status_label": "Pending price approval",
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:31:59.033357+00:00"
+        "created_at": "2026-06-25T01:50:39.609377+00:00"
       }
     }
   ]
