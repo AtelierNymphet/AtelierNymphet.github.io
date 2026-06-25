@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T03:01:12+00:00",
+  "generated_at": "2026-06-25T03:05:50+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
   "purchase_policy": "Only products with approved price, reachable purchase URL, and live Lulu validation are marked purchasable.",
@@ -26,7 +26,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -51,7 +51,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -76,7 +76,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -101,7 +101,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -126,7 +126,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -151,7 +151,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -176,7 +176,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -201,7 +201,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -226,7 +226,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -251,7 +251,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -276,7 +276,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -301,7 +301,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -309,12 +309,12 @@
       "title": "Lola",
       "format": "Hardcover case wrap",
       "pod_package_id": "0583X0827.BW.STD.CW.060UW444.MXX",
-      "page_count": 90,
+      "page_count": 100,
       "interior_url": "https://ateliernymphet.com/lulu/lola/interior.pdf",
       "cover_url": "https://ateliernymphet.com/lulu/lola/cover.pdf",
-      "estimated_print_cost_usd": "12.42",
+      "estimated_print_cost_usd": "12.66",
       "proposed_list_price_usd": "49.00",
-      "estimated_margin_before_shipping_tax_usd": "36.58",
+      "estimated_margin_before_shipping_tax_usd": "36.34",
       "approved_list_price_usd": "49.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
@@ -326,7 +326,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -351,7 +351,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     },
     {
@@ -376,7 +376,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:01:11.361093+00:00"
+        "created_at": "2026-06-25T03:05:49.304833+00:00"
       }
     }
   ]
