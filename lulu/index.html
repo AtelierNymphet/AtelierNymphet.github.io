@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lulu Hardcovers | AtelierNymphet</title>
+    <link rel="canonical" href="https://ateliernymphet.com/lulu/">
+    <link rel="icon" href="data:,">
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #fff6df;
+        --muted: #cfc1a6;
+        --dim: #8f8168;
+        --gold: #f2c95f;
+        --night: #07090b;
+        --panel: rgba(11, 14, 17, 0.82);
+        --line: rgba(255, 246, 223, 0.18);
+        --good: #8ccfa1;
+        --warn: #e6b96e;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(6, 9, 15, 0.44), rgba(6, 7, 8, 0.98) 410px),
+          url("/assets/faery-flight.jpeg") center top / min(1400px, 100vw) auto no-repeat,
+          #07090b;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      a { color: inherit; }
+
+      .shell {
+        width: min(1380px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        padding: clamp(34px, 7vw, 84px) 0 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow,
+      .kicker,
+      dt,
+      .meta,
+      .sku {
+        font: 700 0.72rem/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow,
+      .kicker { color: var(--gold); margin: 0 0 10px; }
+
+      h1 {
+        margin: 0;
+        max-width: 820px;
+        font-size: clamp(3rem, 9vw, 7.8rem);
+        font-weight: 400;
+        line-height: 0.86;
+      }
+
+      .deck {
+        max-width: 760px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.6vw, 1.24rem);
+        line-height: 1.45;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(96px, 1fr));
+        gap: 10px;
+        width: min(310px, 100%);
+      }
+
+      .summary div {
+        border: 1px solid var(--line);
+        background: rgba(255, 246, 223, 0.07);
+        padding: 14px;
+      }
+
+      .summary strong {
+        display: block;
+        font: 400 2.2rem/1 Georgia, "Times New Roman", serif;
+      }
+
+      .summary span {
+        display: block;
+        margin-top: 4px;
+        color: var(--dim);
+        font: 700 0.68rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+        gap: 18px;
+        padding: 28px 0 72px;
+      }
+
+      .product {
+        display: grid;
+        align-content: start;
+        gap: 16px;
+        min-height: 430px;
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(255, 246, 223, 0.09), transparent 44%),
+          var(--panel);
+        padding: 20px;
+      }
+
+      .product.available {
+        border-color: rgba(140, 207, 161, 0.55);
+      }
+
+      .product h2 {
+        margin: 0;
+        font-size: clamp(1.55rem, 2vw, 2.2rem);
+        font-weight: 400;
+        line-height: 1.02;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 14px;
+        margin: 0;
+      }
+
+      dt {
+        color: var(--dim);
+        font-size: 0.62rem;
+      }
+
+      dd {
+        margin: 3px 0 0;
+        color: var(--ink);
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+
+      .validation {
+        margin: 0;
+        color: var(--warn);
+        font: 700 0.82rem/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .available .validation {
+        color: var(--good);
+      }
+
+      .sku {
+        margin: 0;
+        color: var(--dim);
+        font-size: 0.58rem;
+        overflow-wrap: anywhere;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      nav a,
+      .action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        border: 1px solid rgba(242, 201, 95, 0.58);
+        padding: 10px 12px;
+        color: var(--ink);
+        font: 700 0.72rem/1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        border-color: var(--line);
+        color: var(--muted);
+      }
+
+      .action {
+        width: 100%;
+        margin-top: auto;
+        background: rgba(242, 201, 95, 0.12);
+      }
+
+      .action.pending {
+        border-color: rgba(255, 246, 223, 0.16);
+        color: var(--dim);
+        background: rgba(255, 246, 223, 0.04);
+      }
+
+      .meta {
+        margin: 0 0 40px;
+        color: var(--dim);
+        font-size: 0.62rem;
+      }
+
+      @media (max-width: 760px) {
+        header {
+          grid-template-columns: 1fr;
+        }
+
+        .summary {
+          width: 100%;
+        }
+
+        dl {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div>
+          <p class="eyebrow">Atelier Nymphet print editions</p>
+          <h1>Lulu Hardcovers</h1>
+          <p class="deck">
+            Reader-facing hardcover editions staged for Lulu print on demand.
+            Titles remain pending until live Lulu validation, approved pricing,
+            and public purchase links are all recorded.
+          </p>
+        </div>
+        <aside class="summary" aria-label="Storefront status">
+          <div><strong>0</strong><span>Available</span></div>
+          <div><strong>12</strong><span>Pending</span></div>
+        </aside>
+      </header>
+      <section class="grid" aria-label="Hardcover editions">
+        
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Absinthe: Volume 1</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>800</dd></div>
+            <div><dt>Price</dt><dd>$69.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$49.06</dd></div>
+            <div><dt>Margin</dt><dd>$19.94</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0600X0900.FC.STD.CW.080CW444.MXX</p>
+          <nav aria-label="Absinthe: Volume 1 files">
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-01/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-01/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Absinthe: Volume 2</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>800</dd></div>
+            <div><dt>Price</dt><dd>$69.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$49.06</dd></div>
+            <div><dt>Margin</dt><dd>$19.94</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0600X0900.FC.STD.CW.080CW444.MXX</p>
+          <nav aria-label="Absinthe: Volume 2 files">
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-02/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-02/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Absinthe: Volume 3</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>800</dd></div>
+            <div><dt>Price</dt><dd>$69.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$49.06</dd></div>
+            <div><dt>Margin</dt><dd>$19.94</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0600X0900.FC.STD.CW.080CW444.MXX</p>
+          <nav aria-label="Absinthe: Volume 3 files">
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-03/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-03/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Absinthe: Volume 4</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>490</dd></div>
+            <div><dt>Price</dt><dd>$49.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$34.02</dd></div>
+            <div><dt>Margin</dt><dd>$14.98</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0600X0900.FC.STD.CW.080CW444.MXX</p>
+          <nav aria-label="Absinthe: Volume 4 files">
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-04/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/absinthe-volume-04/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Juliette</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>25</dd></div>
+            <div><dt>Price</dt><dd>$18.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$10.86</dd></div>
+            <div><dt>Margin</dt><dd>$7.14</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0425X0687.BW.STD.CW.060UC444.MXX</p>
+          <nav aria-label="Juliette files">
+            <a href="https://ateliernymphet.com/lulu/juliette/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/juliette/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Isibella</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>89</dd></div>
+            <div><dt>Price</dt><dd>$29.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$12.40</dd></div>
+            <div><dt>Margin</dt><dd>$16.60</dd></div>
+          </dl>
+          <p class="validation">Live Lulu validation pending</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="Isibella files">
+            <a href="https://ateliernymphet.com/lulu/isibella/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/isibella/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Return to the Chateau</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>129</dd></div>
+            <div><dt>Price</dt><dd>$29.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$13.36</dd></div>
+            <div><dt>Margin</dt><dd>$15.64</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="Return to the Chateau files">
+            <a href="https://ateliernymphet.com/lulu/return-to-the-chateau/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/return-to-the-chateau/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>The Trial</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>247</dd></div>
+            <div><dt>Price</dt><dd>$39.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$16.19</dd></div>
+            <div><dt>Margin</dt><dd>$22.81</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="The Trial files">
+            <a href="https://ateliernymphet.com/lulu/the-trial/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/the-trial/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Diary of a Young Girl</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>75</dd></div>
+            <div><dt>Price</dt><dd>$29.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$12.06</dd></div>
+            <div><dt>Margin</dt><dd>$16.94</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="Diary of a Young Girl files">
+            <a href="https://ateliernymphet.com/lulu/diary-of-a-young-girl/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/diary-of-a-young-girl/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>The Appeal</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>24</dd></div>
+            <div><dt>Price</dt><dd>$24.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$11.44</dd></div>
+            <div><dt>Margin</dt><dd>$12.56</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0850X1100.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="The Appeal files">
+            <a href="https://ateliernymphet.com/lulu/the-appeal/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/the-appeal/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>The Sentence</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>24</dd></div>
+            <div><dt>Price</dt><dd>$19.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$10.84</dd></div>
+            <div><dt>Margin</dt><dd>$8.16</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="The Sentence files">
+            <a href="https://ateliernymphet.com/lulu/the-sentence/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/the-sentence/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+
+        <article class="product pending_price_approval">
+          <div>
+            <p class="kicker">Pending price approval</p>
+            <h2>Madeleine</h2>
+          </div>
+          <dl>
+            <div><dt>Format</dt><dd>Hardcover case wrap</dd></div>
+            <div><dt>Pages</dt><dd>116</dd></div>
+            <div><dt>Price</dt><dd>$29.00 proposed</dd></div>
+            <div><dt>Print cost</dt><dd>$13.04</dd></div>
+            <div><dt>Margin</dt><dd>$15.96</dd></div>
+          </dl>
+          <p class="validation">Dry run ready</p>
+          <p class="sku">0583X0827.BW.STD.CW.060UW444.MXX</p>
+          <nav aria-label="Madeleine files">
+            <a href="https://ateliernymphet.com/lulu/madeleine/interior.pdf">Interior PDF</a>
+            <a href="https://ateliernymphet.com/lulu/madeleine/cover.pdf">Cover PDF</a>
+          </nav>
+          <span class="action pending" aria-disabled="true">Pending Lulu</span>
+        </article>
+    
+      </section>
+      <p class="meta">Generated 2026-06-25T01:34:30+00:00 from the local Lulu launch manifest. <a href="/lulu/products.json">Product data</a>.</p>
+    </main>
+  </body>
+</html>
