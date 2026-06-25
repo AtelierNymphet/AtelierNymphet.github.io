@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T01:51:21+00:00",
+  "generated_at": "2026-06-25T02:05:32+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
   "purchase_policy": "Only products with approved price, purchase URL, and live Lulu validation are marked purchasable.",
@@ -25,7 +25,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -49,7 +49,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -73,7 +73,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -97,14 +97,14 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
       "work_id": "juliette",
       "title": "Juliette",
       "format": "Hardcover case wrap",
-      "pod_package_id": "0425X0687.BW.STD.CW.060UC444.MXX",
+      "pod_package_id": "0583X0827.BW.STD.CW.060UW444.MXX",
       "page_count": 25,
       "interior_url": "https://ateliernymphet.com/lulu/juliette/interior.pdf",
       "cover_url": "https://ateliernymphet.com/lulu/juliette/cover.pdf",
@@ -121,7 +121,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -145,7 +145,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -169,7 +169,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -193,7 +193,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -217,7 +217,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -241,7 +241,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -265,7 +265,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     },
     {
@@ -289,7 +289,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T01:50:39.609377+00:00"
+        "created_at": "2026-06-25T02:05:05.109806+00:00"
       }
     }
   ]
