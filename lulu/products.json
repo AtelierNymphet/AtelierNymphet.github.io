@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-25T05:43:20+00:00",
+  "generated_at": "2026-06-25T11:58:03+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
-  "purchase_policy": "Only products with approved price, reachable purchase URL, and live Lulu validation are marked purchasable.",
+  "purchase_policy": "Only products with approved price, reachable purchase URL, live Lulu validation, and sandbox proof approval are marked purchasable.",
   "products": [
     {
       "work_id": "absinthe-volume-01",
@@ -18,15 +18,21 @@
       "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "96635f7aa451c2a9fb76bffa2dad3cb8b97594a10c3b1caf7dfbc7dd5104018c",
+        "cover_sha256": "8f943b42a4c028efd5c25d64ac942ce1c069c63c45b777dc7d526f0b4f94f402"
       }
     },
     {
@@ -43,15 +49,21 @@
       "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "55096cf98eeac9a8436681c100e169bf34da55fd3b7d85147b4eb17c588b0dc0",
+        "cover_sha256": "8e9bdf4246a2ce1b6be07b5392e3d41746be40aa331dbfb5e87961ac6f453813"
       }
     },
     {
@@ -68,15 +80,21 @@
       "approved_list_price_usd": "69.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "19db2fe808fd4eb74aec9e67e847e6d23651d5113de4d097a8dd4b66732a0b14",
+        "cover_sha256": "8a214a9d875f222741c9b518c42db493adf23738b9dcbf577830588cb2e2ae33"
       }
     },
     {
@@ -93,15 +111,21 @@
       "approved_list_price_usd": "49.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "fcc3a16cdc3ffb206f618402fa342709a0b82a558ec789f0b2cd86fe6bc3b296",
+        "cover_sha256": "bf30c44eec1146fb374644b326329c07caf146f1ba49d4bc6ba206a833790d88"
       }
     },
     {
@@ -118,15 +142,21 @@
       "approved_list_price_usd": "18.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "42233123f790a58ef940d0d648bf6dd58f264cbbcaf9d8028e18e9889523ee39",
+        "cover_sha256": "ca74502495612f3c939b64fd0a7d70a97e03bd1076301eba22eff38f88508df7"
       }
     },
     {
@@ -143,15 +173,21 @@
       "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "66db322f53917840a8a5045f1ddf54afc99bbf15117d750a2fce0beede588a21",
+        "cover_sha256": "17f6e8274f1262a67a77b73fcaca1d205e87fc02abaf07e7045952df01cfb178"
       }
     },
     {
@@ -168,15 +204,21 @@
       "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "79e9e7d01ea728ec0f37256bd74e6633748c58b36bc027a839690eb3cc9a06fc",
+        "cover_sha256": "b8212eb3ac5864db0408530a15d04de0ec5abe7123c1780865b6bac1e73694fb"
       }
     },
     {
@@ -193,15 +235,21 @@
       "approved_list_price_usd": "39.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "59a66536de21cd4be0f9b564337fe785900cbe8cd75ed8a58982d365e5c2ccdb",
+        "cover_sha256": "4b3fb2fa37ce73dbe68b2ad2325649cf5f3e270b8b0d228effada8c90d3eb8a4"
       }
     },
     {
@@ -218,15 +266,21 @@
       "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "bb1fb646821407c781c2c8efa3255f5c5391f319e0949a75d8aa3086d2bd36ea",
+        "cover_sha256": "4d0396067d9913e0e6ba87ea0be15837effce56dc5b99b3ace3f1cd7b915f27d"
       }
     },
     {
@@ -243,15 +297,21 @@
       "approved_list_price_usd": "24.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "bb9064c31652fb66ada34bffca67e7b54545edc5e01f6635fb22dc27ad600f29",
+        "cover_sha256": "4e894200d91be405ee92bdeffbdf25ce2c4f6f875a5067f4126863f9e3fb8f3d"
       }
     },
     {
@@ -268,15 +328,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "9e20d32981b6508fbd57f0a55b8b85e24b44062eb66e947114b008b99466a9e3",
+        "cover_sha256": "cb1d8abea0c8437f52a02c0a193da7afe21c1bf4c9301a69102cf67184021ea4"
       }
     },
     {
@@ -293,15 +359,21 @@
       "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "672240c0a5538f2665993ed4eb29c1bbfa8f1021d2d68078f1eb750841d1bc05",
+        "cover_sha256": "77ef860768c6a0fddffcbc80f11bfeaf51ce81fb2bbfda1dbce05535f3ec9b4b"
       }
     },
     {
@@ -318,15 +390,21 @@
       "approved_list_price_usd": "24.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "8d31e570d23ac8c883d6b4e0d654402d8d0ae55c91cec53f1c32aa2f153190f0",
+        "cover_sha256": "231b6b9bd7f002418cd5d10afb596950b6551f96c9ee30f18f8b022a9d45d171"
       }
     },
     {
@@ -343,15 +421,21 @@
       "approved_list_price_usd": "39.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "3d745dbbaac02fe2db351d3cc5930b561e4bc0ac78eeffaeec96512e931bafa5",
+        "cover_sha256": "1adfb7489825ee1da790e1cf14348e28fb3225cd08c490a175f38da9e8210dee"
       }
     },
     {
@@ -368,15 +452,21 @@
       "approved_list_price_usd": "49.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "9188e65b053399edcd30d36208471990d47963c6f2bbc84a16270fc23daa1469",
+        "cover_sha256": "a7ad9ede7d01d8554cb8cab4166b26fd3d486c2bdc7de9ecbb404b4ebbbd5cac"
       }
     },
     {
@@ -393,15 +483,21 @@
       "approved_list_price_usd": "49.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "e9623068e2f2a2b2eef03b258acf3924ea39cd3ce76de2e69b208082c81f9581",
+        "cover_sha256": "b308e30d5c4ea45f5d9cc04042fea431b7a509d414c62097af7a98be7a6c1ba2"
       }
     },
     {
@@ -418,15 +514,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "184dafccfc420f3a25b4f3c6ab4b1e973458cb7442519e314983d11c073bf285",
+        "cover_sha256": "236696535aca8147ab11b13a4d64e514af589b6fa0938898d8d1eb720ac4de4b"
       }
     },
     {
@@ -443,15 +545,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "be363c44391b7259f5c376fe9c223f855f5b254adfd97eb470db5b189faaf8c5",
+        "cover_sha256": "09c7b957b958b14439314432ce915c22f1f72415ff0219a7cd01ce9cc90e1057"
       }
     },
     {
@@ -468,15 +576,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "b23c25e0df09fc756bae6a3cf2ef3c3c2b9d3948a9c3cf7756a9d19765fbcd08",
+        "cover_sha256": "d858528e9a01e007a850179eacbc8eb7543546c0f2eeba8080167b537b0feb84"
       }
     },
     {
@@ -493,15 +607,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "9d3d6dbfb4d629e6965cf80534a5f506b131355955029eb53550a0843dcc93e1",
+        "cover_sha256": "6b668ea0adfa11704b007928950d1448c818a8c34c69a1e5e5b913be67187aa9"
       }
     },
     {
@@ -518,15 +638,21 @@
       "approved_list_price_usd": "55.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "cd05a147f3ef31a6b0399fed6386164fbbaa932f487bf821287ac771afcdf306",
+        "cover_sha256": "7dd8892e860edc15165bf7c2c4c1b176b2aafccac3c30e530e6130034a747b99"
       }
     },
     {
@@ -543,15 +669,21 @@
       "approved_list_price_usd": "29.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "ca5b017e6a83e3e8cb23553679417b0ba49d123188aefa664e6760c305194438",
+        "cover_sha256": "8a5236963e4fdaa42cf99b856297a14672198b2d9c9811ed19a63938a65dbb9c"
       }
     },
     {
@@ -568,15 +700,21 @@
       "approved_list_price_usd": "59.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "58d7e6e3a87242e27dda0fe5148183385c2d8bfdac066f87d883bee7774b10e6",
+        "cover_sha256": "3d28948bbc2f20bc2bd5e83e54959deb723ad8ebc81eacd609da038ed92f8488"
       }
     },
     {
@@ -593,15 +731,21 @@
       "approved_list_price_usd": "19.00",
       "purchase_url": "",
       "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
       "can_purchase": false,
       "status": "pending_purchase_url",
       "status_label": "Price approved, Lulu link pending",
       "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
       "validation_status": {
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T05:42:59.773243+00:00"
+        "created_at": "2026-06-25T11:55:23.915301+00:00",
+        "interior_sha256": "e4f202b5e0ab7abac0e035a7d560f052a751506374a5fb8d74de8e62ab3cf134",
+        "cover_sha256": "84201bfb524ce85224fdadc5431f9a032ebab7d376ecfc52d4341f872640d84f"
       }
     }
   ]
