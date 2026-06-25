@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T03:15:00+00:00",
+  "generated_at": "2026-06-25T03:22:55+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
   "purchase_policy": "Only products with approved price, reachable purchase URL, and live Lulu validation are marked purchasable.",
@@ -26,7 +26,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -51,7 +51,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -76,7 +76,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -101,7 +101,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -126,7 +126,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -151,7 +151,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -176,7 +176,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -201,7 +201,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -226,7 +226,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -251,7 +251,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -276,7 +276,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -301,7 +301,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -326,7 +326,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -351,7 +351,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -376,7 +376,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -401,7 +401,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -426,7 +426,7 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     },
     {
@@ -451,7 +451,32 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T03:14:59.207482+00:00"
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
+      }
+    },
+    {
+      "work_id": "cancel-cult-2021",
+      "title": "Cancel Cult: How I Was Banned From Burning Man",
+      "format": "Hardcover case wrap",
+      "pod_package_id": "0583X0827.BW.STD.CW.060UW444.MXX",
+      "page_count": 24,
+      "interior_url": "https://ateliernymphet.com/lulu/cancel-cult-2021/interior.pdf",
+      "cover_url": "https://ateliernymphet.com/lulu/cancel-cult-2021/cover.pdf",
+      "estimated_print_cost_usd": "10.84",
+      "proposed_list_price_usd": "19.00",
+      "estimated_margin_before_shipping_tax_usd": "8.16",
+      "approved_list_price_usd": "19.00",
+      "purchase_url": "",
+      "purchase_url_reachable": false,
+      "can_purchase": false,
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
+      "validation_label": "Dry run ready",
+      "validation_status": {
+        "dry_run": true,
+        "environment": "sandbox",
+        "status": "dry_run_ready",
+        "created_at": "2026-06-25T03:22:54.134279+00:00"
       }
     }
   ]
