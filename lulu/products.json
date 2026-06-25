@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T12:29:21+00:00",
+  "generated_at": "2026-06-25T12:42:06+00:00",
   "provider": "lulu",
   "sales_channel": "direct_print_on_demand",
   "purchase_policy": "Only products with approved price, reachable purchase URL, live Lulu validation, and sandbox proof approval are marked purchasable.",
@@ -30,9 +30,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "96635f7aa451c2a9fb76bffa2dad3cb8b97594a10c3b1caf7dfbc7dd5104018c",
-        "cover_sha256": "f49bb895b2fff6c33c4a91d99544cc4302468d53795d5bf5477ea82b9ece4997"
+        "cover_sha256": "3459204586a5a26a32ded633308cd3835d7c8fcada1fcec5feee93527af98fa1"
       }
     },
     {
@@ -61,9 +61,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "55096cf98eeac9a8436681c100e169bf34da55fd3b7d85147b4eb17c588b0dc0",
-        "cover_sha256": "3b8f63fe740cc4ce03d90526e6ba07a0a4393c741c3459b9f7bc6f06fbf716de"
+        "cover_sha256": "fb9c7bef1b5ca5146f60f6f5ef1ace3fe0b219198ec3098c2654ef98eeae9c5e"
       }
     },
     {
@@ -92,9 +92,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "19db2fe808fd4eb74aec9e67e847e6d23651d5113de4d097a8dd4b66732a0b14",
-        "cover_sha256": "6e4e132021e4f944f097871211fa9e54264dd80d7060f4de61f490e6e26b59f1"
+        "cover_sha256": "850f81d2adfd47525367605e5ec3848c0157cfe39a893402b73c17edc6b103c0"
       }
     },
     {
@@ -123,9 +123,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "fcc3a16cdc3ffb206f618402fa342709a0b82a558ec789f0b2cd86fe6bc3b296",
-        "cover_sha256": "381fb3f6ec13d3ea6534f4a4a835392dca1c725b4f5063198ea765ccd95c865f"
+        "cover_sha256": "181e44e4796459e97c33310360118707d8725524e93ce625644f6343bdcfa725"
       }
     },
     {
@@ -154,9 +154,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "42233123f790a58ef940d0d648bf6dd58f264cbbcaf9d8028e18e9889523ee39",
-        "cover_sha256": "61cffb7d36242a2973daf1b98e7a702d8bf49b71c509112fde6b9b756f1182e4"
+        "cover_sha256": "0bbfb056f8c54c1eb0e18c4a6180223d9561d88c59a2290bf8175c26c433d3ca"
       }
     },
     {
@@ -185,9 +185,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "66db322f53917840a8a5045f1ddf54afc99bbf15117d750a2fce0beede588a21",
-        "cover_sha256": "fef2c274ae0c31f40c358ffc7463485cf8ee53c50762c117387b9680d9111468"
+        "cover_sha256": "c24a3f810f4312a6664029bfdcd9ec33eefd8c44fa82e90ded624f76e421df59"
       }
     },
     {
@@ -216,9 +216,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "79e9e7d01ea728ec0f37256bd74e6633748c58b36bc027a839690eb3cc9a06fc",
-        "cover_sha256": "ab8efbd1fe2652e2acd668166e33e941cf3f6e0d828335ac58f74422e846eb7f"
+        "cover_sha256": "56deb51b1ee35d073518357be8af32415b833d6c72bb8429323f2f2c12df1ef5"
       }
     },
     {
@@ -247,9 +247,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "59a66536de21cd4be0f9b564337fe785900cbe8cd75ed8a58982d365e5c2ccdb",
-        "cover_sha256": "2ccf1c9931c7f0985ba2715f1b3036eebcc24df245efe10fa42069dcfec88bf4"
+        "cover_sha256": "87c42794ab73958e4722ddca20e25718db5da78257f544f511d8afd334d301ae"
       }
     },
     {
@@ -278,9 +278,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "bb1fb646821407c781c2c8efa3255f5c5391f319e0949a75d8aa3086d2bd36ea",
-        "cover_sha256": "9632a832c44a7660253b6723c7ef5c3ace8e2c5c2f606596cbf91e7b617b9649"
+        "cover_sha256": "4b01479e4fe222fcb23b8ec8efba523e7002299b8ab001fe35b891d576b4007c"
       }
     },
     {
@@ -309,9 +309,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "bb9064c31652fb66ada34bffca67e7b54545edc5e01f6635fb22dc27ad600f29",
-        "cover_sha256": "083ef0643a04c0123686dc499adae63c46d5c34929a9395369569ec19711342d"
+        "cover_sha256": "972f682522c2caafb0e9a366fdbbe98b36933a5df7c866b6ceda7776c00de4c4"
       }
     },
     {
@@ -340,9 +340,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "9e20d32981b6508fbd57f0a55b8b85e24b44062eb66e947114b008b99466a9e3",
-        "cover_sha256": "a5832529b158be027f96c45f92898900e3e3de5cd0ed855abf55dd55c27855d0"
+        "cover_sha256": "216af0572ba784c7fdb00ec29785f1edbdf11c1a81482bd9c0078e68b2e1e3bf"
       }
     },
     {
@@ -371,9 +371,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "672240c0a5538f2665993ed4eb29c1bbfa8f1021d2d68078f1eb750841d1bc05",
-        "cover_sha256": "d643fa011203e758aa2570ea16ddeb4999a002e4c3f15f38210be9e6d239fcc5"
+        "cover_sha256": "8623c5471e532c7e7acd2c62d52f9b4c5209c9fe0810e3b636709b8fc9ce942d"
       }
     },
     {
@@ -402,9 +402,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "6a57ead4a6893a7a5b2647f50a7fe0d6b8c9693b6a9225dd07ad17013f4ded67",
-        "cover_sha256": "338b9322789c3f0d6c382efbe30f7982fbff1413ba99efbd96c85ed76d0a9c32"
+        "cover_sha256": "727b41df1ed079ad884fd30d3fcb8dc19fca5373b1adfae4ac51db3819264f8d"
       }
     },
     {
@@ -433,9 +433,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "0c837d89ab51626a59ddd53731db093f229c455d90443b37436169d5f6ad7e0e",
-        "cover_sha256": "d214f1820c6c5e51e84cd558ad919f73c18f7f5289c662b1c007f7e498f66c5f"
+        "cover_sha256": "bd02bd94a5be3b33b872f1268cf7d8c4e839403510207e7ddf54c82645ef334d"
       }
     },
     {
@@ -464,9 +464,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "b7ef645369b72afa6921ca826bf6060160cd3772347584789b3be01c0e7cebd1",
-        "cover_sha256": "cc621173d6e03f8219ff6f43c654a6a1918882fcbbdb5c34cb3b46efb2a27f10"
+        "cover_sha256": "c9222bc3852d1fcc791a3e52a5da8b7c8d3daf329f7d86e4058f15a6637e8530"
       }
     },
     {
@@ -495,9 +495,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "e9623068e2f2a2b2eef03b258acf3924ea39cd3ce76de2e69b208082c81f9581",
-        "cover_sha256": "0e8bf40de2257226bd99157d3c5a4d923de06f1fe4e0f70c9dbe6801ce660e0d"
+        "cover_sha256": "e5fa85c68ccba6501a1868e597d82a3dfc27e9984bf6c359c64f19b2419dc0eb"
       }
     },
     {
@@ -526,9 +526,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "6e73cc84cbe1585535bcf9fcf0e1f52b648f7dab7e55a585d99b6bb4ea11880e",
-        "cover_sha256": "8b9e74245cfc4ece380c5c145d80e4dac666da6aa55fe3dffbac88c4497b8797"
+        "cover_sha256": "8dbe0a5e2f104bbc2aeae3af9bd286c641302133b520e31cb0e4f0aba52a6508"
       }
     },
     {
@@ -557,9 +557,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "fa2eecf656dfc6b39adf30bbad3830df6bcc4ac6785fbfd2bafd420fcf9730cb",
-        "cover_sha256": "10a2fde40771f02bfa354297ae0c794b5bc74e9c2a173fb2cbfa71087c1befbd"
+        "cover_sha256": "e4beccc6f67119a60fc4481ea9507c11607fa56957bbad226517af11c813af38"
       }
     },
     {
@@ -588,9 +588,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "7bc9fde4f5c6834116e5dc72d0dbbd78d668b7b36b17d765d6d015513d8cc771",
-        "cover_sha256": "cd851e0b96a97ef9cea7a2dfef6411e6fd32b1097bcc04f58521269af8da69c6"
+        "cover_sha256": "222b1d9ab24b1664c4efec693ac213c563878a8725a757130d1afcf11693a6f4"
       }
     },
     {
@@ -619,9 +619,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "9d3d6dbfb4d629e6965cf80534a5f506b131355955029eb53550a0843dcc93e1",
-        "cover_sha256": "a1d23cb319912d103f02cce43e4d485baf1eb1f6412f66be345d9352da61adad"
+        "cover_sha256": "576e0b9fe91028d3ad774487892b98ad92bf1985bfcf08466912477dbf4f9719"
       }
     },
     {
@@ -650,9 +650,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "cd05a147f3ef31a6b0399fed6386164fbbaa932f487bf821287ac771afcdf306",
-        "cover_sha256": "858e285001c181988aecea81c804669e3a62f7b1ea11f83a9c9b643cee02eac9"
+        "cover_sha256": "52adf67069f1f585977bff4e374228b661ecceb96822967388ba1ffb1468fb59"
       }
     },
     {
@@ -681,9 +681,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "ca5b017e6a83e3e8cb23553679417b0ba49d123188aefa664e6760c305194438",
-        "cover_sha256": "d13c8eaebc131161042751f091c72c483f4e46ab80bc89c6ddad5092d6ea5ea0"
+        "cover_sha256": "d735bf6e3dba130adcb773923b2c88686461e4fb9fb561bff5c5d734a95d1bef"
       }
     },
     {
@@ -712,9 +712,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "58d7e6e3a87242e27dda0fe5148183385c2d8bfdac066f87d883bee7774b10e6",
-        "cover_sha256": "141f046785fd4f25ab7d6ab53e20f35ee48a62efc8a6f99ab377454f290d933e"
+        "cover_sha256": "725b7bc80c0a23b43da60cd97b3d5e9f6bf820bf302d205f783e15d39c8e1b89"
       }
     },
     {
@@ -743,9 +743,9 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "e4f202b5e0ab7abac0e035a7d560f052a751506374a5fb8d74de8e62ab3cf134",
-        "cover_sha256": "d6601162d86dec7ebc61a5ed8c34f62e539eeaeb9b7bd88f243a8f6f451f6e6d"
+        "cover_sha256": "346b64b17f9b519aa8157939295945b4ec326d0c21e42561620528de10cbfa24"
       }
     },
     {
@@ -774,9 +774,40 @@
         "dry_run": true,
         "environment": "sandbox",
         "status": "dry_run_ready",
-        "created_at": "2026-06-25T12:28:37.280173+00:00",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
         "interior_sha256": "b8eb78bccbcc9d194924f4e889b4cdbb972febfe12a33c96afb4a6aba1d05506",
-        "cover_sha256": "104d5ab549852f02db92a811a3e837e607561e2dc21304c8fd6a5a807d673ab5"
+        "cover_sha256": "ca86aa5230bd321c975b6eb0c9887f682229c49defa31613c19ccaf693e612bc"
+      }
+    },
+    {
+      "work_id": "isibella-puddleduck",
+      "title": "The Tale of Isibella Puddleduck",
+      "format": "Hardcover case wrap",
+      "pod_package_id": "0750X0750.FC.PRE.CW.080CW444.MXX",
+      "page_count": 33,
+      "interior_url": "https://ateliernymphet.com/lulu/isibella-puddleduck/interior.pdf",
+      "cover_url": "https://ateliernymphet.com/lulu/isibella-puddleduck/cover.pdf",
+      "estimated_print_cost_usd": "17.36",
+      "proposed_list_price_usd": "29.00",
+      "estimated_margin_before_shipping_tax_usd": "11.64",
+      "approved_list_price_usd": "29.00",
+      "purchase_url": "",
+      "purchase_url_reachable": false,
+      "sandbox_proof_ready": false,
+      "print_job_status": "blocked_until_lulu_account_ready",
+      "print_job_id": "",
+      "can_purchase": false,
+      "status": "pending_purchase_url",
+      "status_label": "Price approved, Lulu link pending",
+      "validation_label": "Dry run ready",
+      "proof_label": "Sandbox proof pending",
+      "validation_status": {
+        "dry_run": true,
+        "environment": "sandbox",
+        "status": "dry_run_ready",
+        "created_at": "2026-06-25T12:38:37.366465+00:00",
+        "interior_sha256": "54595e5634d11bd7d7bfa9250dd1558818e31643cc33bb972ccb7d0d35339673",
+        "cover_sha256": "da565da5c52fc50c4c5e302b49929b3ebe307f5f34e7beb6c42a64c7b58f9f90"
       }
     }
   ]
