@@ -1,0 +1,600 @@
+{
+  "generatedAt": "2026-06-26",
+  "sourceCount": 54,
+  "works": [
+    [
+      "absinthe",
+      "Absinthe"
+    ],
+    [
+      "brulee",
+      "Brulee"
+    ],
+    [
+      "diary-of-a-stalker",
+      "DiaryOfAStalker"
+    ],
+    [
+      "diary-of-a-young-girl",
+      "DiaryOfAYoungGirl"
+    ],
+    [
+      "isibella",
+      "Isibella"
+    ],
+    [
+      "juliette",
+      "Juliette"
+    ],
+    [
+      "lola",
+      "Lola"
+    ],
+    [
+      "mircalla",
+      "Mircalla"
+    ],
+    [
+      "return-to-the-chateau",
+      "Return to the Chateau"
+    ],
+    [
+      "the-appeal",
+      "The Appeal"
+    ],
+    [
+      "the-opera",
+      "The Opera"
+    ],
+    [
+      "the-sentence",
+      "The Sentence"
+    ],
+    [
+      "the-trial",
+      "The Trial"
+    ]
+  ],
+  "sources": [
+    {
+      "workSlug": "absinthe",
+      "workTitle": "Absinthe",
+      "sourceSlug": "email-archive",
+      "sourceTitle": "Email Archive",
+      "count": 1096,
+      "start": "2006-03-01T00:00:00",
+      "end": "2007-12-31T23:59:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "absinthe",
+      "workTitle": "Absinthe",
+      "sourceSlug": "manuscript-source-index",
+      "sourceTitle": "Manuscript Source Index",
+      "count": 0,
+      "start": "2006-03-01T00:00:00",
+      "end": "2007-12-31T23:59:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "absinthe",
+      "workTitle": "Absinthe",
+      "sourceSlug": "second-life-inventory",
+      "sourceTitle": "Second Life Inventory",
+      "count": 1206,
+      "start": "2006-03-01T00:00:00",
+      "end": "2007-12-31T23:59:00",
+      "status": "source manifests exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "collarspace",
+      "sourceTitle": "Collarspace",
+      "count": 2,
+      "start": "2007-02-05T14:24:00",
+      "end": "2026-05-02T22:22:00",
+      "status": "source extracts exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "email",
+      "sourceTitle": "Email",
+      "count": 190,
+      "start": "2007-02-05T14:24:00",
+      "end": "2007-12-31T01:15:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "source-map",
+      "sourceTitle": "Source Map",
+      "count": 2,
+      "start": "2007-02-05T14:24:00",
+      "end": "2026-05-02T22:22:00",
+      "status": "source maps exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "kittenlogs",
+      "sourceTitle": "Kittenlogs",
+      "count": 5477,
+      "start": "2007-11-08T04:29:00",
+      "end": "2011-06-20T00:00:00",
+      "status": "source indexes exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "perdita-chat-history",
+      "sourceTitle": "Perdita Chat History",
+      "count": 547,
+      "start": "2008-06-06T00:00:00",
+      "end": "2010-01-20T23:59:00",
+      "status": "source inventory and raw preservation set exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "lampeter-gopis",
+      "sourceTitle": "Lampeter Gopis",
+      "count": 144,
+      "start": "2009-05-17T02:00:00",
+      "end": "2009-05-18T05:11:00",
+      "status": "source indexes exist"
+    },
+    {
+      "workSlug": "brulee",
+      "workTitle": "Brulee",
+      "sourceSlug": "groups",
+      "sourceTitle": "Groups",
+      "count": 3997,
+      "start": "2011-01-01T00:00:00",
+      "end": "2023-12-31T23:59:00",
+      "status": "group indexes exist"
+    },
+    {
+      "workSlug": "brulee",
+      "workTitle": "Brulee",
+      "sourceSlug": "messages",
+      "sourceTitle": "Messages",
+      "count": 10786,
+      "start": "2011-01-01T00:00:00",
+      "end": "2023-12-31T23:59:00",
+      "status": "message indexes exist"
+    },
+    {
+      "workSlug": "brulee",
+      "workTitle": "Brulee",
+      "sourceSlug": "source-index",
+      "sourceTitle": "Source Index",
+      "count": 0,
+      "start": "2011-01-01T00:00:00",
+      "end": "2023-12-31T23:59:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "abuse-record",
+      "sourceTitle": "Abuse Record",
+      "count": 19152,
+      "start": "2012-04-23T20:29:00",
+      "end": "2026-05-02T22:22:00",
+      "status": "source ledgers exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "arrest-2012",
+      "sourceTitle": "Arrest 2012",
+      "count": 712,
+      "start": "2012-08-01T00:00:00",
+      "end": "2012-10-31T23:59:00",
+      "status": "source summaries exist"
+    },
+    {
+      "workSlug": "isibella",
+      "workTitle": "Isibella",
+      "sourceSlug": "photos",
+      "sourceTitle": "Photos",
+      "count": 877,
+      "start": "2012-08-24T21:12:00",
+      "end": "2014-04-20T15:00:00",
+      "status": "photo manifest exists"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "photos",
+      "sourceTitle": "Photos",
+      "count": 1,
+      "start": "2013-05-30T14:12:00",
+      "end": "2020-12-30T07:36:00",
+      "status": "photo audit exists"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "source-bible",
+      "sourceTitle": "Source Bible",
+      "count": 1,
+      "start": "2013-05-30T14:12:00",
+      "end": "2020-12-30T07:36:00",
+      "status": "source bible exists"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "toshiba-documents",
+      "sourceTitle": "Toshiba Documents",
+      "count": 42,
+      "start": "2013-05-30T14:12:00",
+      "end": "2017-02-09T08:50:00",
+      "status": "curated raw document packet and text extraction exist"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "pets",
+      "sourceTitle": "Pets",
+      "count": 1052,
+      "start": "2014-03-08T17:16:00",
+      "end": "2020-12-28T08:26:00",
+      "status": "source ledger exists"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "facebook-messages",
+      "sourceTitle": "Facebook Messages",
+      "count": 11434,
+      "start": "2014-04-22T06:00:00",
+      "end": "2020-12-30T07:36:00",
+      "status": "source indexes exist"
+    },
+    {
+      "workSlug": "lola",
+      "workTitle": "Lola",
+      "sourceSlug": "contracts",
+      "sourceTitle": "Contracts",
+      "count": 4,
+      "start": "2014-12-19T16:53:00",
+      "end": "2026-06-15T15:10:00",
+      "status": "source documents exist"
+    },
+    {
+      "workSlug": "lola",
+      "workTitle": "Lola",
+      "sourceSlug": "parsons",
+      "sourceTitle": "Parsons",
+      "count": 1016,
+      "start": "2014-12-19T16:53:00",
+      "end": "2023-01-23T20:56:00",
+      "status": "source probes exist"
+    },
+    {
+      "workSlug": "juliette",
+      "workTitle": "Juliette",
+      "sourceSlug": "case-notes",
+      "sourceTitle": "Case Notes",
+      "count": 2,
+      "start": "2015-12-27T22:33:00",
+      "end": "2020-05-26T16:15:00",
+      "status": "source notes exist"
+    },
+    {
+      "workSlug": "juliette",
+      "workTitle": "Juliette",
+      "sourceSlug": "imessages",
+      "sourceTitle": "Imessages",
+      "count": 69612,
+      "start": "2015-12-27T22:33:00",
+      "end": "2020-05-26T16:15:00",
+      "status": "source extracts exist"
+    },
+    {
+      "workSlug": "juliette",
+      "workTitle": "Juliette",
+      "sourceSlug": "source-digest",
+      "sourceTitle": "Source Digest",
+      "count": 1,
+      "start": "2015-12-27T22:33:00",
+      "end": "2020-05-26T16:15:00",
+      "status": "source digest exists"
+    },
+    {
+      "workSlug": "brulee",
+      "workTitle": "Brulee",
+      "sourceSlug": "drive-slides",
+      "sourceTitle": "Drive Slides",
+      "count": 19,
+      "start": "2016-01-01T00:00:00",
+      "end": "2023-12-31T23:59:00",
+      "status": "slide manifests exist"
+    },
+    {
+      "workSlug": "juliette",
+      "workTitle": "Juliette",
+      "sourceSlug": "facebook",
+      "sourceTitle": "Facebook",
+      "count": 63901,
+      "start": "2016-02-01T00:00:00",
+      "end": "2016-06-30T23:59:00",
+      "status": "source extracts exist"
+    },
+    {
+      "workSlug": "mircalla",
+      "workTitle": "Mircalla",
+      "sourceSlug": "toshiba-chat-history",
+      "sourceTitle": "Toshiba Chat History",
+      "count": 4212,
+      "start": "2016-08-03T20:14:00",
+      "end": "2017-03-28T20:08:00",
+      "status": "source inventory, raw preservation set, and decoded exports exist"
+    },
+    {
+      "workSlug": "brulee",
+      "workTitle": "Brulee",
+      "sourceSlug": "christopher-accusations",
+      "sourceTitle": "Christopher Accusations",
+      "count": 555,
+      "start": "2021-01-01T00:00:00",
+      "end": "2023-12-31T23:59:00",
+      "status": "source indexes exist"
+    },
+    {
+      "workSlug": "diary-of-a-young-girl",
+      "workTitle": "DiaryOfAYoungGirl",
+      "sourceSlug": "pinterest",
+      "sourceTitle": "Pinterest",
+      "count": 1137,
+      "start": "2022-01-01T00:00:00",
+      "end": "2022-01-31T23:59:00",
+      "status": "source review exists"
+    },
+    {
+      "workSlug": "lola",
+      "workTitle": "Lola",
+      "sourceSlug": "lola-chat",
+      "sourceTitle": "Lola Chat",
+      "count": 144380,
+      "start": "2022-01-01T00:00:00",
+      "end": "2022-12-31T23:59:00",
+      "status": "source TSVs exist"
+    },
+    {
+      "workSlug": "diary-of-a-stalker",
+      "workTitle": "DiaryOfAStalker",
+      "sourceSlug": "email",
+      "sourceTitle": "Email",
+      "count": 84,
+      "start": "2022-03-08T06:23:00",
+      "end": "2022-05-16T16:06:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "diary-of-a-stalker",
+      "workTitle": "DiaryOfAStalker",
+      "sourceSlug": "lola-cross-source",
+      "sourceTitle": "Lola Cross Source",
+      "count": 48051,
+      "start": "2022-03-08T06:23:00",
+      "end": "2022-05-16T16:06:00",
+      "status": "cross-source exists"
+    },
+    {
+      "workSlug": "lola",
+      "workTitle": "Lola",
+      "sourceSlug": "email",
+      "sourceTitle": "Email",
+      "count": 84,
+      "start": "2022-03-08T06:23:00",
+      "end": "2022-05-16T16:06:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "the-appeal",
+      "workTitle": "The Appeal",
+      "sourceSlug": "data-index",
+      "sourceTitle": "Data Index",
+      "count": 434,
+      "start": "2023-02-13T22:35:00",
+      "end": "2026-05-28T15:08:00",
+      "status": "source index exists"
+    },
+    {
+      "workSlug": "the-appeal",
+      "workTitle": "The Appeal",
+      "sourceSlug": "messages",
+      "sourceTitle": "Messages",
+      "count": 217,
+      "start": "2023-02-13T22:35:00",
+      "end": "2026-05-28T15:08:00",
+      "status": "message source directory exists"
+    },
+    {
+      "workSlug": "the-appeal",
+      "workTitle": "The Appeal",
+      "sourceSlug": "photos",
+      "sourceTitle": "Photos",
+      "count": 1,
+      "start": "2023-02-13T22:35:00",
+      "end": "2026-05-28T15:08:00",
+      "status": "photo source note exists"
+    },
+    {
+      "workSlug": "the-appeal",
+      "workTitle": "The Appeal",
+      "sourceSlug": "source-documents",
+      "sourceTitle": "Source Documents",
+      "count": 2,
+      "start": "2023-03-06T00:00:00",
+      "end": "2023-04-13T23:59:00",
+      "status": "source documents exist"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "court-proceedings",
+      "sourceTitle": "Court Proceedings",
+      "count": 4,
+      "start": "2023-03-06T00:00:00",
+      "end": "2023-05-09T23:59:00",
+      "status": "source documents exist"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "jail-call-transcripts-clean-dialog",
+      "sourceTitle": "Jail Call Transcripts Clean Dialog",
+      "count": 0,
+      "start": "2023-03-06T00:00:00",
+      "end": "2023-09-27T23:59:00",
+      "status": ""
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "jail-notes",
+      "sourceTitle": "Jail Notes",
+      "count": 2,
+      "start": "2023-03-06T00:00:00",
+      "end": "2023-09-27T23:59:00",
+      "status": "jail notes exist"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "source-map",
+      "sourceTitle": "Source Map",
+      "count": 2,
+      "start": "2023-03-06T00:00:00",
+      "end": "2023-09-27T23:59:00",
+      "status": "source map exists"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "jail-letters",
+      "sourceTitle": "Jail Letters",
+      "count": 2,
+      "start": "2023-04-13T00:00:00",
+      "end": "2023-06-13T23:59:00",
+      "status": "letter intake exists"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "jail-calls",
+      "sourceTitle": "Jail Calls",
+      "count": 772,
+      "start": "2023-04-14T00:00:00",
+      "end": "2023-06-13T23:59:00",
+      "status": "cleaned two-speaker transcript edition exists"
+    },
+    {
+      "workSlug": "the-sentence",
+      "workTitle": "The Sentence",
+      "sourceSlug": "video-visits",
+      "sourceTitle": "Video Visits",
+      "count": 45,
+      "start": "2023-04-15T00:00:00",
+      "end": "2023-06-10T23:59:00",
+      "status": "video-visit index exists"
+    },
+    {
+      "workSlug": "lola",
+      "workTitle": "Lola",
+      "sourceSlug": "photos",
+      "sourceTitle": "Photos",
+      "count": 991,
+      "start": "2026-06-15T15:09:00",
+      "end": "2026-06-15T15:10:00",
+      "status": "photo manifest exists"
+    },
+    {
+      "workSlug": "return-to-the-chateau",
+      "workTitle": "Return to the Chateau",
+      "sourceSlug": "source-appendix",
+      "sourceTitle": "Source Appendix",
+      "count": 1,
+      "start": null,
+      "end": null,
+      "status": "source appendix exists"
+    },
+    {
+      "workSlug": "return-to-the-chateau",
+      "workTitle": "Return to the Chateau",
+      "sourceSlug": "source-audits",
+      "sourceTitle": "Source Audits",
+      "count": 4,
+      "start": null,
+      "end": null,
+      "status": "source audits exist"
+    },
+    {
+      "workSlug": "return-to-the-chateau",
+      "workTitle": "Return to the Chateau",
+      "sourceSlug": "source-edition",
+      "sourceTitle": "Source Edition",
+      "count": 2,
+      "start": null,
+      "end": null,
+      "status": "source edition exists"
+    },
+    {
+      "workSlug": "the-opera",
+      "workTitle": "The Opera",
+      "sourceSlug": "source",
+      "sourceTitle": "Source",
+      "count": 2,
+      "start": null,
+      "end": null,
+      "status": "source file exists"
+    },
+    {
+      "workSlug": "the-trial",
+      "workTitle": "The Trial",
+      "sourceSlug": "legal-page-map",
+      "sourceTitle": "Legal Page Map",
+      "count": 2,
+      "start": null,
+      "end": null,
+      "status": "legal source map exists"
+    },
+    {
+      "workSlug": "the-trial",
+      "workTitle": "The Trial",
+      "sourceSlug": "source-chronology",
+      "sourceTitle": "Source Chronology",
+      "count": 1,
+      "start": null,
+      "end": null,
+      "status": "source chronology exists"
+    },
+    {
+      "workSlug": "the-trial",
+      "workTitle": "The Trial",
+      "sourceSlug": "source-record-audit",
+      "sourceTitle": "Source Record Audit",
+      "count": 2,
+      "start": null,
+      "end": null,
+      "status": "source audit exists"
+    },
+    {
+      "workSlug": "the-trial",
+      "workTitle": "The Trial",
+      "sourceSlug": "trial-source-map",
+      "sourceTitle": "Trial Source Map",
+      "count": 1,
+      "start": null,
+      "end": null,
+      "status": "source map exists"
+    }
+  ]
+}
