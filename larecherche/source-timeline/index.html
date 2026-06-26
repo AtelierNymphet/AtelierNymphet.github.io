@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TDW Source Timeline | La Recherche</title>
+    <link rel="canonical" href="https://ateliernymphet.com/larecherche/source-timeline/">
+    <link rel="icon" href="data:,">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #050608;
+        --panel: rgba(9, 12, 15, 0.78);
+        --panel-strong: rgba(11, 14, 18, 0.92);
+        --ink: #fff4db;
+        --muted: #d6c8ab;
+        --dim: #8e846f;
+        --line: rgba(255, 244, 219, 0.16);
+        --line-strong: rgba(255, 244, 219, 0.3);
+        --gold: #efc65b;
+        --teal: #7fd8c7;
+        --rose: #f29db6;
+        --blue: #88b8ff;
+        --moss: #b8d76c;
+        --coral: #f19d74;
+        --violet: #d3b5ff;
+        --tile: 100%;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 15% 12%, rgba(239, 198, 91, 0.16), transparent 22rem),
+          radial-gradient(circle at 88% 8%, rgba(127, 216, 199, 0.14), transparent 20rem),
+          radial-gradient(circle at 50% 115%, rgba(242, 157, 182, 0.08), transparent 24rem),
+          linear-gradient(180deg, rgba(8, 10, 12, 0.35), rgba(5, 6, 8, 0.9) 18rem, rgba(5, 6, 8, 0.98)),
+          #050608;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1680px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: clamp(28px, 5vw, 58px) 0 22px;
+      }
+
+      .hero-card {
+        padding: clamp(22px, 3vw, 34px);
+        border: 1px solid rgba(255, 244, 219, 0.18);
+        background:
+          linear-gradient(135deg, rgba(255, 244, 219, 0.08), transparent 36%),
+          rgba(7, 10, 13, 0.78);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .eyebrow,
+      .tag,
+      .mini-kicker {
+        margin: 0;
+        color: var(--gold);
+        font: 700 0.72rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 12px 0 0;
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: 400;
+        line-height: 0.86;
+        letter-spacing: -0.07em;
+      }
+
+      .deck {
+        max-width: 850px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.6vw, 1.22rem);
+        line-height: 1.45;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 244, 219, 0.16);
+        border-radius: 999px;
+        background: rgba(255, 244, 219, 0.04);
+        color: var(--ink);
+        font: 600 0.76rem/1.2 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .chip small {
+        color: var(--dim);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: none;
+      }
+
+      .panel {
+        margin: 18px 0 22px;
+        border: 1px solid rgba(255, 244, 219, 0.14);
+        background: linear-gradient(180deg, rgba(10, 13, 16, 0.84), rgba(7, 8, 10, 0.92));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 18px;
+        padding: 18px 18px 12px;
+        border-bottom: 1px solid rgba(255, 244, 219, 0.12);
+      }
+
+      .panel-head h2 {
+        margin: 6px 0 0;
+        font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .panel-head p {
+        margin: 8px 0 0;
+        color: var(--dim);
+        font: 0.85rem/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .legend {
+        display: grid;
+        gap: 8px;
+        justify-items: end;
+        color: var(--muted);
+        font: 0.78rem/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        text-align: right;
+      }
+
+      .legend-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .sample {
+        width: 72px;
+        height: 10px;
+        border-radius: 999px;
+      }
+
+      .sample.dashed {
+        background:
+          linear-gradient(90deg, rgba(255, 244, 219, 0.6) 0 12px, transparent 12px 20px) left center / 20px 100% repeat-x;
+      }
+
+      .chart-shell {
+        overflow-x: auto;
+        overflow-y: hidden;
+        background:
+          linear-gradient(90deg, transparent, rgba(255, 244, 219, 0.02) 50%, transparent),
+          linear-gradient(180deg, rgba(255, 244, 219, 0.01), rgba(255, 244, 219, 0.04));
+      }
+
+      svg {
+        display: block;
+        min-width: 1520px;
+        width: 100%;
+        height: auto;
+      }
+
+      .footer {
+        padding: 0 0 42px;
+        color: var(--dim);
+        font: 0.86rem/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .footer a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 244, 219, 0.24);
+      }
+
+      .footer a:hover {
+        border-bottom-color: rgba(239, 198, 91, 0.7);
+      }
+
+      @media (max-width: 760px) {
+        .hero-card,
+        .panel-head {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .panel-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .legend {
+          justify-items: start;
+          text-align: left;
+        }
+
+        svg {
+          min-width: 1360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero shell">
+      <section class="hero-card" aria-label="TDW source timeline introduction">
+        <p class="eyebrow">La Recherche / Twenty Dollar Words</p>
+        <h1>Source Timeline</h1>
+        <p class="deck">
+          Each line is one TDW source lane. The x-axis is divided by month and year.
+          Stroke thickness scales with the source lane's record count. Lanes without a
+          structured date stay marked as provisional instead of being silently invented.
+        </p>
+        <div class="chips" id="summary-chips" aria-label="Timeline summary"></div>
+      </section>
+    </header>
+
+    <main class="shell">
+      <section class="panel" aria-labelledby="timeline-title">
+        <div class="panel-head">
+          <div>
+            <p class="mini-kicker">Infographic</p>
+            <h2 id="timeline-title">Coverage by source lane</h2>
+            <p>Data is derived from the local TDW lane files and their listed artifacts.</p>
+          </div>
+          <div class="legend" aria-hidden="true">
+            <div class="legend-row"><span>More records</span><span class="sample" style="background: linear-gradient(90deg, rgba(239, 198, 91, 0.95), rgba(239, 198, 91, 0.95)); height: 14px"></span></div>
+            <div class="legend-row"><span>Fewer records</span><span class="sample" style="background: linear-gradient(90deg, rgba(255, 244, 219, 0.92), rgba(255, 244, 219, 0.92)); height: 4px"></span></div>
+            <div class="legend-row"><span>Undated lane</span><span class="sample dashed"></span></div>
+          </div>
+        </div>
+        <div class="chart-shell">
+          <svg id="timeline" role="img" aria-label="TDW source timeline infographic"></svg>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <p>
+        Return to <a href="/larecherche/">La Recherche</a>. This view is a TDW-derived
+        index, not a replacement for the source lanes themselves.
+      </p>
+    </footer>
+
+    <script type="module">
+      const palette = {
+        absinthe: "#efc65b",
+        brulee: "#f19d74",
+        "diary-of-a-stalker": "#88b8ff",
+        "diary-of-a-young-girl": "#7fd8c7",
+        isibella: "#f29db6",
+        juliette: "#d3b5ff",
+        lola: "#b8d76c",
+        mircalla: "#9dd39a",
+        "return-to-the-chateau": "#ffbf87",
+        "the-appeal": "#8ed1ff",
+        "the-opera": "#f0a6c8",
+        "the-sentence": "#f2c65c",
+        "the-trial": "#c4b0ff",
+      };
+
+      const data = await fetch("./source-timeline-data.json").then((response) => response.json());
+      const sources = data.sources.map((source, index) => ({
+        ...source,
+        index,
+        startDate: source.start ? new Date(source.start) : null,
+        endDate: source.end ? new Date(source.end) : null,
+      }));
+
+      const monthsBetween = (start, end) =>
+        (end.getUTCFullYear() - start.getUTCFullYear()) * 12 + (end.getUTCMonth() - start.getUTCMonth());
+
+      const monthFloor = (date) => new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 1));
+      const monthCeil = (date) => new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 1));
+      const addMonths = (date, months) => new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + months, 1));
+      const daysInMonth = (date) => new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 0)).getUTCDate();
+
+      const validSources = sources.filter((source) => source.startDate && source.endDate);
+      const domainStart = monthFloor(new Date(Math.min(...validSources.map((source) => source.startDate.getTime()))));
+      const domainEnd = monthCeil(new Date(Math.max(...validSources.map((source) => source.endDate.getTime()))));
+      const totalMonths = Math.max(1, monthsBetween(domainStart, domainEnd) + 1);
+
+      const chart = document.getElementById("timeline");
+      const summaryChips = document.getElementById("summary-chips");
+      const groups = new Map();
+      const groupOrder = [];
+
+      for (const source of sources) {
+        if (!groups.has(source.workSlug)) {
+          groups.set(source.workSlug, []);
+          groupOrder.push(source.workSlug);
+        }
+        groups.get(source.workSlug).push(source);
+      }
+
+      for (const items of groups.values()) {
+        items.sort((a, b) => {
+          const aTime = a.startDate ? a.startDate.getTime() : Number.POSITIVE_INFINITY;
+          const bTime = b.startDate ? b.startDate.getTime() : Number.POSITIVE_INFINITY;
+          return aTime - bTime || a.sourceTitle.localeCompare(b.sourceTitle);
+        });
+      }
+
+      const workCounts = groupOrder.map((workSlug) => {
+        const items = groups.get(workSlug);
+        return {
+          workSlug,
+          workTitle: items[0].workTitle,
+          laneCount: items.length,
+          recordCount: items.reduce((sum, source) => sum + source.count, 0),
+          datedCount: items.filter((source) => source.startDate && source.endDate).length,
+        };
+      });
+
+      const totalRecords = sources.reduce((sum, source) => sum + source.count, 0);
+      const datedSources = sources.filter((source) => source.startDate && source.endDate).length;
+      const undatedSources = sources.length - datedSources;
+
+      summaryChips.innerHTML = [
+        `<span class="chip">${sources.length} source lanes <small>all source lanes in the manifest</small></span>`,
+        `<span class="chip">${totalRecords.toLocaleString()} records <small>counted from listed artifacts</small></span>`,
+        `<span class="chip">${datedSources} dated / ${undatedSources} provisional <small>structured date coverage</small></span>`,
+      ].join("");
+
+      const labelWidth = 360;
+      const rightPad = 56;
+      const monthStep = 9;
+      const topPad = 78;
+      const workHeaderGap = 34;
+      const rowGap = 24;
+      const rowStep = 26;
+      const rowY = 16;
+      const groupGap = 24;
+      const plotWidth = totalMonths * monthStep;
+      const width = labelWidth + plotWidth + rightPad;
+
+      const workColor = (slug) => palette[slug] || "#efc65b";
+      const xForDate = (date) => {
+        const monthIndex = monthsBetween(domainStart, monthFloor(date));
+        const monthStart = monthFloor(date);
+        const monthFraction = (date.getUTCDate() - 1 + date.getUTCHours() / 24 + date.getUTCMinutes() / 1440) / daysInMonth(monthStart);
+        return labelWidth + (monthIndex + monthFraction) * monthStep;
+      };
+
+      const strokeForCount = (count, maxCount) => {
+        const minStroke = 1.6;
+        const maxStroke = 16;
+        const scaled = Math.log1p(Math.max(0, count)) / Math.log1p(Math.max(1, maxCount));
+        return minStroke + scaled * (maxStroke - minStroke);
+      };
+
+      const maxCount = Math.max(...sources.map((source) => source.count), 1);
+      const groupRows = [];
+      let y = topPad;
+
+      for (const workSlug of groupOrder) {
+        const items = groups.get(workSlug);
+        const work = workCounts.find((entry) => entry.workSlug === workSlug);
+        groupRows.push({
+          type: "header",
+          y,
+          work,
+        });
+        y += workHeaderGap;
+
+        for (const source of items) {
+          groupRows.push({
+            type: "row",
+            y,
+            source,
+            work,
+          });
+          y += rowStep;
+        }
+
+        y += groupGap;
+      }
+
+      const height = y + 56;
+      chart.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      chart.setAttribute("width", width);
+      chart.setAttribute("height", height);
+
+      const ns = "http://www.w3.org/2000/svg";
+      const el = (name, attrs = {}, text = null) => {
+        const node = document.createElementNS(ns, name);
+        for (const [key, value] of Object.entries(attrs)) {
+          if (value !== null && value !== undefined) node.setAttribute(key, String(value));
+        }
+        if (text !== null) node.textContent = text;
+        return node;
+      };
+
+      chart.appendChild(el("rect", { x: 0, y: 0, width, height, fill: "#060708" }));
+
+      const axisTop = 44;
+      const axisBottom = height - 32;
+      for (let monthOffset = 0; monthOffset < totalMonths; monthOffset += 1) {
+        const current = addMonths(domainStart, monthOffset);
+        const x = labelWidth + monthOffset * monthStep;
+        const isJanuary = current.getUTCMonth() === 0;
+        const isQuarter = current.getUTCMonth() % 3 === 0;
+        chart.appendChild(el("line", {
+          x1: x,
+          x2: x,
+          y1: axisTop,
+          y2: axisBottom,
+          stroke: isJanuary ? "rgba(255,244,219,0.16)" : isQuarter ? "rgba(255,244,219,0.08)" : "rgba(255,244,219,0.045)",
+          "stroke-width": isJanuary ? 1.2 : 0.8,
+        }));
+
+        if (isJanuary) {
+          chart.appendChild(el("text", {
+            x: x + 2,
+            y: 24,
+            fill: "rgba(239,198,91,0.9)",
+            "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            "font-size": "11",
+            "font-weight": "700",
+            "letter-spacing": "0.12em",
+            "text-transform": "uppercase",
+          }, String(current.getUTCFullYear())));
+        }
+      }
+
+      chart.appendChild(el("line", {
+        x1: labelWidth,
+        x2: width - rightPad,
+        y1: axisTop,
+        y2: axisTop,
+        stroke: "rgba(255,244,219,0.18)",
+        "stroke-width": 1,
+      }));
+
+      const titleX = 24;
+      for (const entry of groupRows) {
+        if (entry.type === "header") {
+          const { work, y: gy } = entry;
+          chart.appendChild(el("text", {
+            x: titleX,
+            y: gy + 4,
+            fill: workColor(work.workSlug),
+            "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            "font-size": "18",
+            "font-weight": "700",
+            "letter-spacing": "0.06em",
+            "text-transform": "uppercase",
+          }, work.workTitle.replace(/([a-z])([A-Z])/g, "$1 $2")));
+
+          chart.appendChild(el("text", {
+            x: 236,
+            y: gy + 4,
+            fill: "rgba(214, 200, 171, 0.8)",
+            "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            "font-size": "11",
+            "font-weight": "700",
+            "letter-spacing": "0.18em",
+          }, `${work.laneCount} lanes · ${work.recordCount.toLocaleString()} records`));
+          continue;
+        }
+
+        const { source, y: sy } = entry;
+        const stroke = workColor(source.workSlug);
+        const rowLabel = `${source.sourceTitle}`;
+        const suffix = source.count.toLocaleString();
+        const isDated = Boolean(source.startDate && source.endDate);
+        const thickness = strokeForCount(source.count, maxCount);
+        const barY = sy + rowY;
+        const barStart = isDated ? xForDate(source.startDate) : labelWidth + 10;
+        const barEnd = isDated ? xForDate(source.endDate) : labelWidth + 92;
+        const dash = isDated ? null : "6 4";
+        const alpha = isDated ? 0.92 : 0.42;
+
+        chart.appendChild(el("text", {
+          x: titleX,
+          y: barY + 5,
+          fill: "rgba(255,244,219,0.92)",
+          "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          "font-size": "14",
+          "font-weight": "600",
+        }, rowLabel));
+
+        chart.appendChild(el("text", {
+          x: 258,
+          y: barY + 5,
+          fill: "rgba(214,200,171,0.78)",
+          "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          "font-size": "12",
+          "font-weight": "700",
+          "text-anchor": "end",
+        }, suffix));
+
+        chart.appendChild(el("line", {
+          x1: barStart,
+          x2: barEnd,
+          y1: barY,
+          y2: barY,
+          stroke,
+          "stroke-width": thickness,
+          "stroke-linecap": "round",
+          "stroke-dasharray": dash,
+          "stroke-opacity": alpha,
+        }));
+
+        chart.appendChild(el("circle", {
+          cx: barStart,
+          cy: barY,
+          r: Math.max(2.2, thickness / 2.2),
+          fill: stroke,
+          "fill-opacity": alpha,
+        }));
+
+        if (!isDated) {
+          chart.appendChild(el("text", {
+            x: barEnd + 12,
+            y: barY + 4,
+            fill: "rgba(214,200,171,0.8)",
+            "font-family": 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            "font-size": "10",
+            "font-weight": "700",
+            "letter-spacing": "0.12em",
+            "text-transform": "uppercase",
+          }, "undated"));
+        }
+
+        chart.appendChild(el("line", {
+          x1: labelWidth,
+          x2: width - rightPad,
+          y1: barY + 10,
+          y2: barY + 10,
+          stroke: "rgba(255,244,219,0.05)",
+          "stroke-width": 1,
+        }));
+      }
+
+      // A minimal frame to anchor the plot bounds.
+      chart.appendChild(el("rect", {
+        x: labelWidth,
+        y: axisTop,
+        width: plotWidth,
+        height: axisBottom - axisTop,
+        fill: "none",
+        stroke: "rgba(255,244,219,0.08)",
+        "stroke-width": 1,
+      }));
+    </script>
+  </body>
+</html>

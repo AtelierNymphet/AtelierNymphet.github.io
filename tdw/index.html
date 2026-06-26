@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TDW Gallery | AtelierNymphet</title>
+    <link rel="canonical" href="https://ateliernymphet.com/tdw/">
+    <link rel="icon" href="data:,">
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #fff4db;
+        --muted: #d7c8ab;
+        --dim: #90856d;
+        --gold: #efc65b;
+        --line: rgba(255, 244, 219, 0.16);
+        --panel: rgba(9, 11, 14, 0.74);
+        --panel-strong: rgba(8, 10, 12, 0.94);
+        --shadow: 0 34px 90px rgba(0, 0, 0, 0.48);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      body {
+        overflow-x: hidden;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at 16% 14%, rgba(239, 198, 91, 0.18), transparent 20rem),
+          radial-gradient(circle at 80% 9%, rgba(143, 184, 255, 0.16), transparent 18rem),
+          linear-gradient(180deg, rgba(5, 7, 9, 0.2), rgba(5, 7, 9, 0.92)),
+          #050608;
+      }
+
+      #bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .overlay {
+        position: relative;
+        z-index: 1;
+        width: min(1600px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: clamp(18px, 4vw, 40px) 0 30px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+        align-items: start;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, rgba(255, 244, 219, 0.08), transparent 36%), var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(12px);
+      }
+
+      .intro {
+        padding: clamp(22px, 3vw, 34px);
+      }
+
+      .eyebrow,
+      .mini-kicker,
+      .stat-label {
+        margin: 0;
+        color: var(--gold);
+        font: 700 0.74rem/1.3 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 10px 0 0;
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: 400;
+        line-height: 0.86;
+        letter-spacing: -0.075em;
+      }
+
+      .deck {
+        max-width: 760px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.55vw, 1.18rem);
+        line-height: 1.45;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border: 1px solid rgba(239, 198, 91, 0.72);
+        border-radius: 999px;
+        background: rgba(239, 198, 91, 0.1);
+        color: var(--ink);
+        text-decoration: none;
+        font: 700 0.76rem/1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .button:hover {
+        background: rgba(239, 198, 91, 0.2);
+      }
+
+      .stats {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .stat {
+        padding: 14px 14px 12px;
+        border: 1px solid rgba(255, 244, 219, 0.12);
+        background: rgba(4, 6, 8, 0.44);
+      }
+
+      .stat-value {
+        margin: 8px 0 0;
+        font-size: clamp(1.6rem, 3vw, 2.5rem);
+        font-weight: 400;
+        line-height: 0.98;
+      }
+
+      .stat-note {
+        margin: 8px 0 0;
+        color: var(--dim);
+        font: 0.84rem/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .gallery {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .frame {
+        position: relative;
+        border: 1px solid rgba(255, 244, 219, 0.18);
+        background: linear-gradient(180deg, rgba(8, 10, 12, 0.76), rgba(5, 6, 7, 0.94));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .frame-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(255, 244, 219, 0.12);
+      }
+
+      .frame-head h2 {
+        margin: 0;
+        font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .frame-head p {
+        margin: 8px 0 0;
+        color: var(--dim);
+        font: 0.84rem/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .frame-link {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(239, 198, 91, 0.28);
+      }
+
+      .frame-link:hover {
+        border-bottom-color: rgba(239, 198, 91, 0.7);
+      }
+
+      .iframe-wrap {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        min-height: 680px;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(239, 198, 91, 0.08), transparent 30%),
+          #050608;
+      }
+
+      iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #050608;
+      }
+
+      .footer {
+        padding: 18px 0 36px;
+        color: var(--dim);
+        font: 0.86rem/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .footer a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 244, 219, 0.22);
+      }
+
+      .footer a:hover {
+        border-bottom-color: rgba(239, 198, 91, 0.72);
+      }
+
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .iframe-wrap {
+          min-height: 560px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .overlay {
+          width: min(100vw - 16px, 1600px);
+        }
+
+        .frame-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .iframe-wrap {
+          min-height: 480px;
+          aspect-ratio: auto;
+          height: 72vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg" aria-hidden="true"></div>
+
+    <main class="overlay">
+      <section class="hero">
+        <article class="card intro">
+          <p class="eyebrow">Twenty Dollar Words / Three.js Gallery</p>
+          <h1>TDW Gallery</h1>
+          <p class="deck">
+            A floating gallery shell for the TDW source index. The timeline itself is still
+            rendered as canonical TDW data, but this route gives it a gallery presentation
+            and a permanent home under <code>/tdw/</code>.
+          </p>
+          <div class="actions">
+            <a class="button" href="/larecherche/source-timeline/">Open timeline directly</a>
+            <a class="button" href="/larecherche/twenty-dollar-words/">Browse TDW browser</a>
+            <a class="button" href="/larecherche/twenty-dollar-words/info/">TDW info</a>
+          </div>
+        </article>
+
+        <aside class="card stats" id="stats" aria-label="TDW summary stats"></aside>
+      </section>
+
+      <section class="gallery">
+        <article class="frame">
+          <div class="frame-head">
+            <div>
+              <p class="mini-kicker">Gallery View</p>
+              <h2>Source Timeline</h2>
+              <p>
+                <a class="frame-link" href="/larecherche/source-timeline/">Open the standalone chart</a>
+                or stay inside the gallery frame below.
+              </p>
+            </div>
+            <p style="margin:0; color: var(--dim); font: 0.82rem/1.4 ui-sans-serif, system-ui, sans-serif;">
+              Month / year axis · stroke thickness by record count
+            </p>
+          </div>
+          <div class="iframe-wrap">
+            <iframe title="TDW source timeline" src="/larecherche/source-timeline/"></iframe>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Gallery surface only. The underlying source records live in TDW and Supabase.
+          Return to <a href="/larecherche/">La Recherche</a>.
+        </p>
+      </footer>
+    </main>
+
+    <script type="module">
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+
+      const statsEl = document.getElementById("stats");
+      const bg = document.getElementById("bg");
+      const data = await fetch("/larecherche/source-timeline-data.json").then((response) => response.json());
+
+      const workSummary = new Map();
+      for (const source of data.sources) {
+        const summary = workSummary.get(source.workSlug) || {
+          workSlug: source.workSlug,
+          workTitle: source.workTitle,
+          sources: 0,
+          records: 0,
+        };
+        summary.sources += 1;
+        summary.records += source.count;
+        workSummary.set(source.workSlug, summary);
+      }
+
+      const works = [...workSummary.values()].sort((a, b) => a.workTitle.localeCompare(b.workTitle));
+      const totalRecords = data.sources.reduce((sum, source) => sum + source.count, 0);
+      const datedSources = data.sources.filter((source) => source.start && source.end).length;
+
+      statsEl.innerHTML = [
+        `<div class="stat"><p class="stat-label">Source lanes</p><p class="stat-value">${data.sourceCount}</p><p class="stat-note">All TDW lanes represented in the gallery data.</p></div>`,
+        `<div class="stat"><p class="stat-label">Records</p><p class="stat-value">${totalRecords.toLocaleString()}</p><p class="stat-note">Counted from the artifacts listed in each lane file.</p></div>`,
+        `<div class="stat"><p class="stat-label">Dated lanes</p><p class="stat-value">${datedSources}</p><p class="stat-note">${data.sourceCount - datedSources} lanes remain provisional and are marked as such.</p></div>`,
+      ].join("");
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x050608, 18, 52);
+
+      const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 200);
+      camera.position.set(0, 2.5, 18);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.domElement.style.position = "absolute";
+      renderer.domElement.style.inset = "0";
+      bg.appendChild(renderer.domElement);
+
+      const ambient = new THREE.AmbientLight(0xffffff, 1.9);
+      scene.add(ambient);
+
+      const keyLight = new THREE.DirectionalLight(0xefc65b, 1.2);
+      keyLight.position.set(-4, 8, 10);
+      scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0x88b8ff, 0.75);
+      fillLight.position.set(8, -2, 8);
+      scene.add(fillLight);
+
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const createPlaneTexture = (title, subtitle, count, color) => {
+        const canvas = document.createElement("canvas");
+        canvas.width = 1024;
+        canvas.height = 640;
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#090b0d";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, `${color}ee`);
+        gradient.addColorStop(0.6, "rgba(255,244,219,0.14)");
+        gradient.addColorStop(1, "rgba(0,0,0,0.92)");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = "rgba(255,244,219,0.26)";
+        ctx.lineWidth = 4;
+        ctx.strokeRect(18, 18, canvas.width - 36, canvas.height - 36);
+
+        ctx.fillStyle = "rgba(255,244,219,0.95)";
+        ctx.font = "700 42px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+        ctx.fillText(title, 42, 92);
+
+        ctx.fillStyle = "rgba(255,244,219,0.76)";
+        ctx.font = "600 22px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+        ctx.fillText(subtitle, 42, 136);
+
+        ctx.fillStyle = "rgba(255,244,219,0.92)";
+        ctx.font = "400 88px Georgia, 'Times New Roman', serif";
+        ctx.fillText(count.toLocaleString(), 42, 420);
+
+        ctx.fillStyle = "rgba(255,244,219,0.74)";
+        ctx.font = "600 20px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+        ctx.fillText("records", 44, 466);
+
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.colorSpace = THREE.SRGBColorSpace;
+        return texture;
+      };
+
+      const cardGeometry = new THREE.PlaneGeometry(3.2, 1.95, 1, 1);
+      const cards = [];
+      const ringRadius = 8.8;
+      const sortedWorks = works.slice(0, 12);
+
+      sortedWorks.forEach((work, index) => {
+        const angle = (index / Math.max(sortedWorks.length, 1)) * Math.PI * 2;
+        const color = ["#efc65b", "#f19d74", "#88b8ff", "#7fd8c7", "#f29db6", "#d3b5ff", "#b8d76c"][index % 7];
+        const material = new THREE.MeshStandardMaterial({
+          map: createPlaneTexture(work.workTitle, `${work.sources} lanes`, work.records, color),
+          metalness: 0.1,
+          roughness: 0.9,
+          transparent: true,
+        });
+        const mesh = new THREE.Mesh(cardGeometry, material);
+        mesh.position.set(Math.cos(angle) * ringRadius, Math.sin(angle * 0.72) * 1.4, Math.sin(angle) * ringRadius);
+        mesh.rotation.y = -angle + Math.PI / 2;
+        mesh.rotation.z = Math.sin(angle) * 0.03;
+        mesh.userData = { angle, color };
+        group.add(mesh);
+        cards.push(mesh);
+      });
+
+      const centerMaterial = new THREE.MeshStandardMaterial({
+        color: 0x101217,
+        metalness: 0.2,
+        roughness: 0.85,
+        transparent: true,
+        opacity: 0.9,
+      });
+      const centerFrame = new THREE.Mesh(new THREE.BoxGeometry(5.2, 3.2, 0.18), centerMaterial);
+      centerFrame.position.set(0, 0, 0);
+      group.add(centerFrame);
+
+      const accent = new THREE.Mesh(
+        new THREE.TorusGeometry(4.4, 0.03, 12, 128),
+        new THREE.MeshStandardMaterial({ color: 0xefc65b, emissive: 0x30200a, emissiveIntensity: 0.4 }),
+      );
+      accent.rotation.x = Math.PI / 2;
+      accent.position.set(0, 0.4, 0);
+      group.add(accent);
+
+      const stars = new THREE.BufferGeometry();
+      const starCount = 300;
+      const positions = new Float32Array(starCount * 3);
+      for (let i = 0; i < starCount; i += 1) {
+        positions[i * 3 + 0] = (Math.random() - 0.5) * 60;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 28;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 44;
+      }
+      stars.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      const starField = new THREE.Points(
+        stars,
+        new THREE.PointsMaterial({ color: 0xf2c95f, size: 0.03, transparent: true, opacity: 0.7 }),
+      );
+      scene.add(starField);
+
+      const pointer = { x: 0, y: 0 };
+      window.addEventListener("pointermove", (event) => {
+        pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+        pointer.y = (event.clientY / window.innerHeight) * 2 - 1;
+      });
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      const clock = new THREE.Clock();
+      const animate = () => {
+        const t = clock.getElapsedTime();
+        group.rotation.y = t * 0.08 + pointer.x * 0.08;
+        group.rotation.x = pointer.y * 0.05;
+        starField.rotation.y = t * 0.02;
+        starField.rotation.x = t * 0.01;
+        cards.forEach((mesh, index) => {
+          mesh.position.y = Math.sin(t * 0.7 + index) * 0.14 + Math.sin(index * 0.5) * 0.1;
+          mesh.rotation.z = Math.sin(t * 0.5 + index) * 0.025;
+        });
+        accent.rotation.z = t * 0.2;
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      };
+
+      animate();
+    </script>
+  </body>
+</html>
